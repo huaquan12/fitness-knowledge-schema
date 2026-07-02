@@ -1,0 +1,5719 @@
+{
+  "analysis_date": "2026-07-02",
+  "schema_version": "2.0",
+  "data_source": "structured/knowhow-upgraded.json",
+  "summary": {
+    "total_documents": 21,
+    "total_entries": 428,
+    "analysis_dimensions": 5,
+    "derived_conclusions": 18
+  },
+  "causal_chain_analysis": {
+    "total_causal_entries": 89,
+    "cross_document_patterns": [],
+    "cross_document_keywords": [
+      {
+        "keyword": "平台",
+        "mention_count": 12,
+        "merchant_count": 6,
+        "merchants": [
+          "Hercules",
+          "乐刻",
+          "勤鸟SaaS",
+          "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+          "洛克公园",
+          "银吉姆"
+        ]
+      },
+      {
+        "keyword": "教练",
+        "mention_count": 10,
+        "merchant_count": 7,
+        "merchants": [
+          "Hercules",
+          "PURE",
+          "Z&B",
+          "乐刻",
+          "超级猩猩",
+          "青橙SaaS",
+          "魔炼普拉提"
+        ]
+      },
+      {
+        "keyword": "获客",
+        "mention_count": 10,
+        "merchant_count": 8,
+        "merchants": [
+          "Hercules",
+          "NRG",
+          "Yee Active普拉提",
+          "Z&B",
+          "乐刻",
+          "威尔仕",
+          "银吉姆",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "供给",
+        "mention_count": 10,
+        "merchant_count": 7,
+        "merchants": [
+          "Hercules",
+          "健身通产品（平台视角）",
+          "多品牌分析",
+          "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+          "行业整体",
+          "银吉姆",
+          "魔炼普拉提"
+        ]
+      },
+      {
+        "keyword": "体验",
+        "mention_count": 9,
+        "merchant_count": 8,
+        "merchants": [
+          "Flow Cycle",
+          "NRG",
+          "Yee Active普拉提",
+          "ZERO G Bungee",
+          "乐刻（深度营销分析）",
+          "健身通产品（平台视角）",
+          "威尔仕",
+          "超级猩猩"
+        ]
+      },
+      {
+        "keyword": "转化",
+        "mention_count": 7,
+        "merchant_count": 5,
+        "merchants": [
+          "ZERO G Bungee",
+          "乐刻（深度营销分析）",
+          "行业整体",
+          "青橙SaaS",
+          "魔炼普拉提"
+        ]
+      },
+      {
+        "keyword": "扩张",
+        "mention_count": 6,
+        "merchant_count": 6,
+        "merchants": [
+          "Yee Active普拉提",
+          "乐刻",
+          "勤鸟SaaS",
+          "威尔仕",
+          "青橙SaaS",
+          "魔炼普拉提"
+        ]
+      },
+      {
+        "keyword": "会员",
+        "mention_count": 6,
+        "merchant_count": 5,
+        "merchants": [
+          "Hercules",
+          "Z&B",
+          "久博体育",
+          "乐刻（深度营销分析）",
+          "威尔仕"
+        ]
+      },
+      {
+        "keyword": "课程",
+        "mention_count": 5,
+        "merchant_count": 4,
+        "merchants": [
+          "NRG",
+          "PURE",
+          "久博体育",
+          "超级猩猩"
+        ]
+      },
+      {
+        "keyword": "留存",
+        "mention_count": 5,
+        "merchant_count": 5,
+        "merchants": [
+          "NRG",
+          "Z&B",
+          "ZERO G Bungee",
+          "乐刻（深度营销分析）",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "品类",
+        "mention_count": 5,
+        "merchant_count": 4,
+        "merchants": [
+          "Flow Cycle",
+          "ZERO G Bungee",
+          "青橙SaaS",
+          "魔炼普拉提"
+        ]
+      },
+      {
+        "keyword": "佣金",
+        "mention_count": 5,
+        "merchant_count": 4,
+        "merchants": [
+          "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+          "行业整体",
+          "银吉姆",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "租金",
+        "mention_count": 4,
+        "merchant_count": 4,
+        "merchants": [
+          "PURE",
+          "Z&B",
+          "久博体育",
+          "乐刻"
+        ]
+      },
+      {
+        "keyword": "定价",
+        "mention_count": 4,
+        "merchant_count": 3,
+        "merchants": [
+          "乐刻（深度营销分析）",
+          "多品牌分析",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "口碑",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "PURE",
+          "Z&B",
+          "威尔仕"
+        ]
+      },
+      {
+        "keyword": "选址",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "PURE",
+          "Z&B",
+          "久博体育"
+        ]
+      },
+      {
+        "keyword": "客单价",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "PURE",
+          "久博体育",
+          "超级猩猩"
+        ]
+      },
+      {
+        "keyword": "低门槛",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "乐刻",
+          "勤鸟SaaS",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "私教",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "Z&B",
+          "超级猩猩",
+          "青橙SaaS"
+        ]
+      },
+      {
+        "keyword": "营销",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "Yee Active普拉提",
+          "Z&B",
+          "行业整体"
+        ]
+      },
+      {
+        "keyword": "规模化",
+        "mention_count": 3,
+        "merchant_count": 3,
+        "merchants": [
+          "Hercules",
+          "ZERO G Bungee",
+          "健身通产品（平台视角）"
+        ]
+      }
+    ],
+    "all_causal_entries": [
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "高端定位→低流失率→稳定现金流",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "严格教练筛选→课程质量稳定→口碑传播",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "核心商圈选址→高租金→倒逼高客单价维持",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "预付费模式→现金流前置→扩张驱动",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "大面积门店→高固定成本→依赖持续获客",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "销售导向→会员体验争议→口碑两极化",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "月卡制→低门槛→高获客量→薄利多销",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "小面积门店→低租金→可快速扩张",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "平台化教练→人力成本灵活→毛利可控",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "网红风格→社交传播→自然获客",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "按次付费→用户无压力→复购靠体验",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "课程趣味化→年轻群体粘性→但留存依赖持续创新",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "专注单品类→专业壁垒→差异化竞争",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "产后修复场景→强需求→高转化高客单",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "自建培训体系→教练供给可控→但扩张受限于培训速度",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "纯私教→高客单→低会员数量即可盈亏平衡",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "口碑获客→低营销成本→高利润率",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练高收入→低流失→服务稳定性→会员留存",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "小面积门店→低租金→选址灵活",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "沉浸式体验→情绪价值→高复购",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "单一品类→运营简单→标准化强→可快速复制",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "社群运营→社交绑定→降低流失",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "场地利用率高（坪效优于传统健身房）",
+        "causal_role": "null",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "新品类→好奇心驱动→首次体验转化高",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "安全门槛高→竞争对手少→短期护城河",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "品类认知度低→市场教育成本高→规模化慢",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "体验新奇→社交传播强→但长期留存靠训练效果",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "小班制→个性化体验→高满意度→续费率高",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "时尚品牌定位→溢价空间→利润率优于普通工作室",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "线上内容营销→品牌认知→降低获客成本",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "严格限制班级人数→师资扩张成为增长瓶颈",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "按次付费→零决策门槛→高首次体验率",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "教练IP化→粉丝粘性→课程溢价",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "产品化课程研发→标准化高→可复制性强",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "纯团课无私教→客单价天花板→盈利靠坪效和翻台率",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "社区选址→租金可控→盈亏平衡门槛低",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "全年龄覆盖→扩大潜在用户池→但课程管理复杂度高",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "亲民价格→低客单价→依赖会员规模",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "统一定价→商家价格反弹→建议差异定价促进获客竞争",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "企业差旅直连佣金模式→价格优势→大客户留存（国网差旅成本降1/3）",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "免费SaaS版→支付通道返佣→低门槛获客→市场份额扩张",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "飞盘俱乐部2000+（教练转型主理人）→交易低频→无法转化为SaaS付费用户",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "SaaS功能全覆盖→一个出口管理多平台→商户粘性高",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "西南垄断→竞争压力小→扩张动力来自新业务（to G/to B）",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "代运营模式→从平台赚返佣→商户免费→低门槛拓客",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "产研排期紧张→需平台政策激励→对接优先级由商务驱动",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "抖音低佣金→商户愿意上年卡→高GMV",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "美团高佣金→仅上引流品→平台定位为获客渠道而非交易平台",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "老店客群覆盖饱和→拉新极难→依赖续费维持",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "新店→拉新为流水主来源→更依赖外部渠道",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "老带新→实物奖励+会籍延长→高性价比获客",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "线上低价引流供给→访购率低→商户认知'引流效果差'→恶性循环",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "点评获客80%→对平台依赖度极高→淡季需增加运营投入",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "续约率90%→核心靠教练-学员关系→教练流失=会员流失",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "轻奢定位→追求人的服务→规模化受限于教练供给",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "全职教练→管理控制力强→成本高但稳定",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "圈子获资源→信任成本低→但视野受限",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "8-10点数覆盖50%+用户→80-100元为最优定价区间",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "top3品牌占76.5%预订→KA高度依赖→招商集中度风险",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "上海预订用户占61.4%→需求集中→首城选择上海",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "开放场次预订仅1.6%→开放场地供给过剩或需求不匹配",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部稳定出货→场馆低管理成本→生态互依",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "拼场为社交载体→熟人局为主→平台最多切10%交易",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "平台佣金高于自有体系→有场馆资源的不缺流量→不愿合作",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "场地供给稀缺→场馆强势→跟场地预订走",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部启动容易→稳定开场+好友转介绍→滚雪球增长",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "多平台占位→隔离用户信息→防止流失至平台",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "私域成熟+场地稀缺→不缺流量→对平台合作低敏感",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "政府场地（九回）→无营业执照→合作障碍",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "抖音达人包→高流量→但需要好内容（亲子票受欢迎）",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "拓新城时才需外部流量→合作窗口在SSR馆开城期",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "场馆类利润薄→任何额外抽佣都不可接受→需通道费模式",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "Listing提示条0.4%点击率→样式感知弱→需强化设计",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "充值页缺少可用门店信息→用户无法决策→需增加门店模块",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "单价格段限制→无法引入高价商户→供给覆盖受限",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "招商链路长→无法规模化→需系统捞单+活动招商双线",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "6张券包为主力→用户愿意批量购买→有提频潜力",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "核销率36.3%→2/3券未使用→需激活使用或体验优化",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "7级门店定价→美团需就高→线上价格失去竞争力→限制线上GMV",
+        "causal_role": "constrains",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "订阅制首月立减→降低尝试门槛→会员留存延长",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "裂变10-30%新客→低成本高效→但依赖产品化工具",
+        "causal_role": "drives",
+        "confidence": "adopted",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "Cross流量+体验卡→到店转化→但转化链路长",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "用户事业部新成立→跨部门整合→预计活动类型更丰富",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "MEM+佣金模式→商户最优解为低价引流→线上充斥低价",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "低价供给→用户无法通过价格判断品质→访购率低",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "platform_perspective"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "访购率低→商户认知'引流效果差'→加深'高引流成本'错误印象",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "恶性循环飞轮：低价供给→低访购→商户不满→更不愿上核心供给",
+        "causal_role": "vetoes",
+        "confidence": "disputed",
+        "domain": "interviewer_artifact"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "破局点：增量渠道营销能力建设→商户提供转化供给→新客感知提升",
+        "causal_role": "drives",
+        "confidence": "disputed",
+        "domain": "industry_intrinsic"
+      }
+    ]
+  },
+  "business_model_analysis": [
+    {
+      "business_model": "预付费年卡+私教",
+      "merchant_count": 2,
+      "merchants": [
+        "威尔仕",
+        "银吉姆"
+      ],
+      "total_entries": 31,
+      "exclusion_count": 3,
+      "causal_count": 6,
+      "top_causal_keywords": [
+        [
+          "预付费模式",
+          1
+        ],
+        [
+          "现金流前置",
+          1
+        ],
+        [
+          "扩张驱动",
+          1
+        ],
+        [
+          "大面积门店",
+          1
+        ],
+        [
+          "高固定成本",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做纯团课小型工作室模式",
+        "不走低价月卡路线",
+        "旺季不做深折扣"
+      ],
+      "causal_chains": [
+        "预付费模式→现金流前置→扩张驱动",
+        "大面积门店→高固定成本→依赖持续获客",
+        "销售导向→会员体验争议→口碑两极化",
+        "老店客群覆盖饱和→拉新极难→依赖续费维持",
+        "新店→拉新为流水主来源→更依赖外部渠道",
+        "老带新→实物奖励+会籍延长→高性价比获客"
+      ]
+    },
+    {
+      "business_model": "按次/课包制",
+      "merchant_count": 2,
+      "merchants": [
+        "Flow Cycle",
+        "ZERO G Bungee"
+      ],
+      "total_entries": 34,
+      "exclusion_count": 6,
+      "causal_count": 8,
+      "top_causal_keywords": [
+        [
+          "沉浸式体验",
+          1
+        ],
+        [
+          "情绪价值",
+          1
+        ],
+        [
+          "高复购",
+          1
+        ],
+        [
+          "单一品类",
+          1
+        ],
+        [
+          "运营简单",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不增设其他运动品类",
+        "不做线上直播课",
+        "不走低价路线",
+        "不接受超出体重限制的学员",
+        "不做无教练自助训练",
+        "不做线上课程"
+      ],
+      "causal_chains": [
+        "沉浸式体验→情绪价值→高复购",
+        "单一品类→运营简单→标准化强→可快速复制",
+        "社群运营→社交绑定→降低流失",
+        "场地利用率高（坪效优于传统健身房）",
+        "新品类→好奇心驱动→首次体验转化高",
+        "安全门槛高→竞争对手少→短期护城河",
+        "品类认知度低→市场教育成本高→规模化慢",
+        "体验新奇→社交传播强→但长期留存靠训练效果"
+      ]
+    },
+    {
+      "business_model": "会员制+团课",
+      "merchant_count": 1,
+      "merchants": [
+        "PURE"
+      ],
+      "total_entries": 15,
+      "exclusion_count": 3,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "高端定位",
+          1
+        ],
+        [
+          "低流失率",
+          1
+        ],
+        [
+          "稳定现金流",
+          1
+        ],
+        [
+          "严格教练筛选",
+          1
+        ],
+        [
+          "课程质量稳定",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做低价竞争",
+        "不追求快速规模化扩张",
+        "不接受加盟模式"
+      ],
+      "causal_chains": [
+        "高端定位→低流失率→稳定现金流",
+        "严格教练筛选→课程质量稳定→口碑传播",
+        "核心商圈选址→高租金→倒逼高客单价维持"
+      ]
+    },
+    {
+      "business_model": "月卡制+平台化运营",
+      "merchant_count": 1,
+      "merchants": [
+        "乐刻"
+      ],
+      "total_entries": 12,
+      "exclusion_count": 3,
+      "causal_count": 2,
+      "top_causal_keywords": [
+        [
+          "月卡制",
+          1
+        ],
+        [
+          "低门槛",
+          1
+        ],
+        [
+          "高获客量",
+          1
+        ],
+        [
+          "薄利多销",
+          1
+        ],
+        [
+          "小面积门店",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做预付费年卡",
+        "不设会籍销售团队",
+        "拒绝外部访谈合作（本次被拒）"
+      ],
+      "causal_chains": [
+        "月卡制→低门槛→高获客量→薄利多销",
+        "小面积门店→低租金→可快速扩张"
+      ]
+    },
+    {
+      "business_model": "按次付费/课包制",
+      "merchant_count": 1,
+      "merchants": [
+        "NRG"
+      ],
+      "total_entries": 12,
+      "exclusion_count": 2,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "网红风格",
+          1
+        ],
+        [
+          "社交传播",
+          1
+        ],
+        [
+          "自然获客",
+          1
+        ],
+        [
+          "按次付费",
+          1
+        ],
+        [
+          "用户无压力",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做传统器械区",
+        "不走年卡预付模式"
+      ],
+      "causal_chains": [
+        "网红风格→社交传播→自然获客",
+        "按次付费→用户无压力→复购靠体验",
+        "课程趣味化→年轻群体粘性→但留存依赖持续创新"
+      ]
+    },
+    {
+      "business_model": "课包制+私教",
+      "merchant_count": 1,
+      "merchants": [
+        "魔炼普拉提"
+      ],
+      "total_entries": 14,
+      "exclusion_count": 2,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "专注单品类",
+          1
+        ],
+        [
+          "专业壁垒",
+          1
+        ],
+        [
+          "差异化竞争",
+          1
+        ],
+        [
+          "产后修复场景",
+          1
+        ],
+        [
+          "强需求",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不开设有氧或力量训练区域",
+        "不做纯团课大班"
+      ],
+      "causal_chains": [
+        "专注单品类→专业壁垒→差异化竞争",
+        "产后修复场景→强需求→高转化高客单",
+        "自建培训体系→教练供给可控→但扩张受限于培训速度"
+      ]
+    },
+    {
+      "business_model": "纯私教制",
+      "merchant_count": 1,
+      "merchants": [
+        "Z&B"
+      ],
+      "total_entries": 19,
+      "exclusion_count": 4,
+      "causal_count": 4,
+      "top_causal_keywords": [
+        [
+          "纯私教",
+          1
+        ],
+        [
+          "高客单",
+          1
+        ],
+        [
+          "低会员数量即可盈亏平衡",
+          1
+        ],
+        [
+          "口碑获客",
+          1
+        ],
+        [
+          "低营销成本",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不开设团课",
+        "不做年卡预付",
+        "不做任何形式的地推获客",
+        "不接受加盟"
+      ],
+      "causal_chains": [
+        "纯私教→高客单→低会员数量即可盈亏平衡",
+        "口碑获客→低营销成本→高利润率",
+        "教练高收入→低流失→服务稳定性→会员留存",
+        "小面积门店→低租金→选址灵活"
+      ]
+    },
+    {
+      "business_model": "课包制+小班团课",
+      "merchant_count": 1,
+      "merchants": [
+        "Yee Active普拉提"
+      ],
+      "total_entries": 17,
+      "exclusion_count": 3,
+      "causal_count": 4,
+      "top_causal_keywords": [
+        [
+          "小班制",
+          1
+        ],
+        [
+          "个性化体验",
+          1
+        ],
+        [
+          "高满意度",
+          1
+        ],
+        [
+          "续费率高",
+          1
+        ],
+        [
+          "时尚品牌定位",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做大班课",
+        "不做男性专项课程",
+        "不走加盟模式"
+      ],
+      "causal_chains": [
+        "小班制→个性化体验→高满意度→续费率高",
+        "时尚品牌定位→溢价空间→利润率优于普通工作室",
+        "线上内容营销→品牌认知→降低获客成本",
+        "严格限制班级人数→师资扩张成为增长瓶颈"
+      ]
+    },
+    {
+      "business_model": "按次付费团课",
+      "merchant_count": 1,
+      "merchants": [
+        "超级猩猩"
+      ],
+      "total_entries": 17,
+      "exclusion_count": 3,
+      "causal_count": 4,
+      "top_causal_keywords": [
+        [
+          "按次付费",
+          1
+        ],
+        [
+          "零决策门槛",
+          1
+        ],
+        [
+          "高首次体验率",
+          1
+        ],
+        [
+          "教练IP化",
+          1
+        ],
+        [
+          "粉丝粘性",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不做年卡预付费",
+        "不设私教课程",
+        "不做24小时无人值守"
+      ],
+      "causal_chains": [
+        "按次付费→零决策门槛→高首次体验率",
+        "教练IP化→粉丝粘性→课程溢价",
+        "产品化课程研发→标准化高→可复制性强",
+        "纯团课无私教→客单价天花板→盈利靠坪效和翻台率"
+      ]
+    },
+    {
+      "business_model": "会员卡+私教+团课",
+      "merchant_count": 1,
+      "merchants": [
+        "久博体育"
+      ],
+      "total_entries": 14,
+      "exclusion_count": 2,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "社区选址",
+          1
+        ],
+        [
+          "租金可控",
+          1
+        ],
+        [
+          "盈亏平衡门槛低",
+          1
+        ],
+        [
+          "全年龄覆盖",
+          1
+        ],
+        [
+          "扩大潜在用户池",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不追求高端商圈选址",
+        "不做纯线上模式"
+      ],
+      "causal_chains": [
+        "社区选址→租金可控→盈亏平衡门槛低",
+        "全年龄覆盖→扩大潜在用户池→但课程管理复杂度高",
+        "亲民价格→低客单价→依赖会员规模"
+      ]
+    },
+    {
+      "business_model": "SaaS订阅+支付流水佣金+企业服务",
+      "merchant_count": 1,
+      "merchants": [
+        "青橙SaaS"
+      ],
+      "total_entries": 15,
+      "exclusion_count": 1,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "统一定价",
+          1
+        ],
+        [
+          "商家价格反弹",
+          1
+        ],
+        [
+          "建议差异定价促进获客竞争",
+          1
+        ],
+        [
+          "团课/自训/私教用户不重叠",
+          1
+        ],
+        [
+          "运动偏好固化",
+          1
+        ]
+      ],
+      "exclusions": [
+        "对羽毛球场馆几乎无对应商户"
+      ],
+      "causal_chains": [
+        "统一定价→商家价格反弹→建议差异定价促进获客竞争",
+        "团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难",
+        "飞盘俱乐部2000+（教练转型主理人）→交易低频→无法转化为SaaS付费用户"
+      ]
+    },
+    {
+      "business_model": "SaaS销售+代运营+平台返佣",
+      "merchant_count": 1,
+      "merchants": [
+        "勤鸟SaaS"
+      ],
+      "total_entries": 12,
+      "exclusion_count": 1,
+      "causal_count": 1,
+      "top_causal_keywords": [
+        [
+          "西南垄断",
+          1
+        ],
+        [
+          "竞争压力小",
+          1
+        ],
+        [
+          "扩张动力来自新业务（to G/to B）",
+          1
+        ]
+      ],
+      "exclusions": [
+        "竞品信息不便直接分享"
+      ],
+      "causal_chains": [
+        "西南垄断→竞争压力小→扩张动力来自新业务（to G/to B）"
+      ]
+    },
+    {
+      "business_model": "纯私教课程售卖",
+      "merchant_count": 1,
+      "merchants": [
+        "Hercules"
+      ],
+      "total_entries": 30,
+      "exclusion_count": 3,
+      "causal_count": 4,
+      "top_causal_keywords": [
+        [
+          "续约率90%",
+          1
+        ],
+        [
+          "核心靠教练-学员关系",
+          1
+        ],
+        [
+          "教练流失=会员流失",
+          1
+        ],
+        [
+          "轻奢定位",
+          1
+        ],
+        [
+          "追求人的服务",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不加盟",
+        "不做线上课/直播",
+        "不追求软件自动化取代人的服务"
+      ],
+      "causal_chains": [
+        "续约率90%→核心靠教练-学员关系→教练流失=会员流失",
+        "轻奢定位→追求人的服务→规模化受限于教练供给",
+        "全职教练→管理控制力强→成本高但稳定",
+        "圈子获资源→信任成本低→但视野受限"
+      ]
+    },
+    {
+      "business_model": "N/A - 平台分析视角",
+      "merchant_count": 1,
+      "merchants": [
+        "多品牌分析"
+      ],
+      "total_entries": 13,
+      "exclusion_count": 1,
+      "causal_count": 2,
+      "top_causal_keywords": [
+        [
+          "top3品牌占76.5%预订",
+          1
+        ],
+        [
+          "KA高度依赖",
+          1
+        ],
+        [
+          "招商集中度风险",
+          1
+        ],
+        [
+          "开放场次预订仅1.6%",
+          1
+        ],
+        [
+          "开放场地供给过剩或需求不匹配",
+          1
+        ]
+      ],
+      "exclusions": [
+        "Coreland等200+元/节商户不符合首期招商范围"
+      ],
+      "causal_chains": [
+        "top3品牌占76.5%预订→KA高度依赖→招商集中度风险",
+        "开放场次预订仅1.6%→开放场地供给过剩或需求不匹配"
+      ]
+    },
+    {
+      "business_model": "场地预订+拼场佣金+增值服务",
+      "merchant_count": 1,
+      "merchants": [
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）"
+      ],
+      "total_entries": 20,
+      "exclusion_count": 2,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "俱乐部稳定出货",
+          1
+        ],
+        [
+          "场馆低管理成本",
+          1
+        ],
+        [
+          "生态互依",
+          1
+        ],
+        [
+          "场地供给稀缺",
+          1
+        ],
+        [
+          "场馆强势",
+          1
+        ]
+      ],
+      "exclusions": [
+        "50%+非盈利俱乐部不接受额外抽佣",
+        "不公开活动约1/9"
+      ],
+      "causal_chains": [
+        "俱乐部稳定出货→场馆低管理成本→生态互依",
+        "场地供给稀缺→场馆强势→跟场地预订走",
+        "俱乐部启动容易→稳定开场+好友转介绍→滚雪球增长"
+      ]
+    },
+    {
+      "business_model": "场地售卖+储值+会籍+赛事",
+      "merchant_count": 1,
+      "merchants": [
+        "洛克公园"
+      ],
+      "total_entries": 15,
+      "exclusion_count": 0,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "政府场地（九回）",
+          1
+        ],
+        [
+          "无营业执照",
+          1
+        ],
+        [
+          "合作障碍",
+          1
+        ],
+        [
+          "拓新城时才需外部流量",
+          1
+        ],
+        [
+          "合作窗口在SSR馆开城期",
+          1
+        ]
+      ],
+      "exclusions": [],
+      "causal_chains": [
+        "政府场地（九回）→无营业执照→合作障碍",
+        "拓新城时才需外部流量→合作窗口在SSR馆开城期",
+        "场馆类利润薄→任何额外抽佣都不可接受→需通道费模式"
+      ]
+    },
+    {
+      "business_model": "0折券包购买→跨店兑换",
+      "merchant_count": 1,
+      "merchants": [
+        "健身通产品（平台视角）"
+      ],
+      "total_entries": 6,
+      "exclusion_count": 2,
+      "causal_count": 2,
+      "top_causal_keywords": [
+        [
+          "单价格段限制",
+          1
+        ],
+        [
+          "无法引入高价商户",
+          1
+        ],
+        [
+          "供给覆盖受限",
+          1
+        ],
+        [
+          "招商链路长",
+          1
+        ],
+        [
+          "无法规模化",
+          1
+        ]
+      ],
+      "exclusions": [
+        "暂不扩展至新奇体验类目（hold）",
+        "招商无法规模化（需逐一人工确认）"
+      ],
+      "causal_chains": [
+        "单价格段限制→无法引入高价商户→供给覆盖受限",
+        "招商链路长→无法规模化→需系统捞单+活动招商双线"
+      ]
+    },
+    {
+      "business_model": "会员卡+私教+团课+FEELINGME",
+      "merchant_count": 1,
+      "merchants": [
+        "乐刻（深度营销分析）"
+      ],
+      "total_entries": 15,
+      "exclusion_count": 1,
+      "causal_count": 3,
+      "top_causal_keywords": [
+        [
+          "订阅制首月立减",
+          1
+        ],
+        [
+          "降低尝试门槛",
+          1
+        ],
+        [
+          "会员留存延长",
+          1
+        ],
+        [
+          "裂变10-30%新客",
+          1
+        ],
+        [
+          "低成本高效",
+          1
+        ]
+      ],
+      "exclusions": [
+        "不设新客专属商品（倾向常规商品+新客立减）"
+      ],
+      "causal_chains": [
+        "订阅制首月立减→降低尝试门槛→会员留存延长",
+        "裂变10-30%新客→低成本高效→但依赖产品化工具",
+        "用户事业部新成立→跨部门整合→预计活动类型更丰富"
+      ]
+    },
+    {
+      "business_model": "N/A - 平台策略分析",
+      "merchant_count": 1,
+      "merchants": [
+        "行业整体"
+      ],
+      "total_entries": 5,
+      "exclusion_count": 0,
+      "causal_count": 1,
+      "top_causal_keywords": [
+        [
+          "破局点：增量渠道营销能力建设",
+          1
+        ],
+        [
+          "商户提供转化供给",
+          1
+        ],
+        [
+          "新客感知提升",
+          1
+        ]
+      ],
+      "exclusions": [],
+      "causal_chains": [
+        "破局点：增量渠道营销能力建设→商户提供转化供给→新客感知提升"
+      ]
+    }
+  ],
+  "confidence_audit": {
+    "adopted_count": 92,
+    "disputed_count": 336,
+    "falsified_count": 0,
+    "adopted_rate": "21.5%",
+    "adopted_entries": [
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "门店面积小（300-500平米）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "会员以女性为主（90%以上）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "单店面积控制在200-400平米",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "会员留存率高（据称70%以上年留存）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "满座率低于60%需调整排课策略",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "小班课（6-8人）为主力产品",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "每班人数严格限制不超过8人",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "活跃俱乐部3.2万家，其中2万+为免费版用户",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "历史累计服务6万+俱乐部",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "月活会员516万（到店口径），累计1600万",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "月活教练23万（有课口径），累计96万",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "收入GTV 29亿，店月均现金收入10万",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "自主训练用户224万月活、月频6.7次",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "团课用户174万月活、月频5.2次",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "私教用户166万月活、月频3.9次",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "预计打通后10%商户愿意一键同步预订到美团",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "历史累计服务商户1.5万家，当前合作约5000家",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "西南市场市占率超90%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "大型活动800-1000家商户参与，中型几百家",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "全国100+店，苏州46家，江浙区域TOP1",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "抖音佣金实际仅1.4%（3.5%费率*60%返还），美团佣金7%",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "抖音每店日均销售1张年卡（2980元），日均十几至二十万",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "全年4次大促（3/6/8/12月），每月有可选主题活动",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "5年/10年老店拉新难度极大，新客占比可低至10%以下",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "会籍顾问销售提成8%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "已签约美团年框5%+2%返CPC，实际7%",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "线上渠道仅设引流品（限新1次低价体验）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "上海3家店，目标打造轻奢品牌",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "前期投入100万，房租4万/月",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "两店月收入合计130万",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "私教课300+/节，教练提成约60元/节",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "续约率90%+",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "新客来源：点评80%，老客带新客20%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "用户平均40节课/年",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "毛巾+纸杯等消耗品月花费近1万",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "点评获客80%→对平台依赖度极高→淡季需增加运营投入",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "续约率90%→核心靠教练-学员关系→教练流失=会员流失",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "CP单日（北上广深杭）课程2504节，总容量10525人，实际预订1201人",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "8-10点数（80-100元/节）覆盖预订用户50.8%",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "top3品牌预订用户占比46.2%（威尔仕/Z&B/威尔仕W）",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "上海课程供给占比28.8%但预订用户占比61.4%",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "当前MEM商户中有团课团购的商户1991家",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "用户需求top5：普拉提26.1%、瑜伽21.1%、HIIT14.6%、功能性训练13.2%、舞蹈12.6%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "开放场次课程数量占比31%但预订人数仅1.6%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "乐刻非会员单次79元",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "威尔仕非会员单次109-119元",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "Z&B新客体验50元/节，10节起售109/99元/节",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "F45单次120-200元",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "Coreland普拉提200-300元/节不符合首期范围",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "价格段确定为80-100元",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "多数团购为限新1次购买，价格与可重复购买有差异",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "8-10点数覆盖50%+用户→80-100元为最优定价区间",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "top3品牌占76.5%预订→KA高度依赖→招商集中度风险",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "上海预订用户占61.4%→需求集中→首城选择上海",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "开放场次预订仅1.6%→开放场地供给过剩或需求不匹配",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部贡献场馆约70-80%库存出货",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "线上预订（美团+趣运动+动网）约6亿，总GTV约30亿，总市场约110亿",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "70%商业场馆未线上化",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部50%+为非盈利（爱好者），仅10%为盈利性",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "每周稳定2-3新人加入20人活动",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "拼场抽佣极低（泡泡羽球0.2%，韵动吧1%）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "韵动吧渗透上海80%网球场馆（200+），场地预订年GMV6000万",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "韵动吧周拼场GMV30万+，日均百来场",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "对7%佣金和5折MEM认为过高",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "拼场利润率不高，用户忍耐界限为加价20%（人均50 vs 60）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "场馆不愿接受7%佣金（超过自身收佣5%）",
+        "layer": "exclusion",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "50%+非盈利俱乐部不接受额外抽佣",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "拼场为社交载体→熟人局为主→平台最多切10%交易",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "私域小程序日活2万，会员200万（24年预增至230万）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "收入90%+来自自有小程序",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "羽毛球100%预订（包场）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "九回小程序用户90万，近一年活跃35-45万",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "九回场地费2-3元/小时，月卡100多",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "嘉善SSR馆2个月抖音达人卖50万门票",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "羽毛球预订微信仅千六通道费，不接受美团7%",
+        "layer": "rule",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "不接受7%佣金（场地资源稀缺不缺流量）",
+        "layer": "exclusion",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "2024年7月17日上海试点上线（10%→50%→推全）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "6张券包为主力商品（交易用户169人/GTV 65910/客单390）",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "售卖张数2256，核销820张，核销率36.3%",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "商品访购率16.4%",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "独立投放页日均UV约100，交易占总交易23.7%",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "Listing充值提示条点击率仅0.4%",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "充值页人均访问4.9次",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "累计5日交易GTV 84026元，交易用户236人",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "Listing提示条0.4%点击率→样式感知弱→需强化设计",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "核销率36.3%→2/3券未使用→需激活使用或体验优化",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "裂变可贡献门店新客10%-30%",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "体验卡为0元成交商品而非营销活动",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "体验卡定位为商品（0元成交），非营销活动",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "外部体验卡需Cross流量发放→乐刻提供0元体验卡资源",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "裂变10-30%新客→低成本高效→但依赖产品化工具",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "线上供给以低价引流品为主（限新1次购买）",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      }
+    ],
+    "disputed_entries": [
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "会员以高收入白领和外籍人士为主",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "选址偏好核心商圈甲级写字楼",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "提供瑜伽、普拉提、团课等多品类课程",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "强调空间设计和环境品质",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "教练筛选标准严格",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "新店选址必须满足周边高净值人群密度要求",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "教练需经过多轮面试和试课",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "课程排期根据会员到店高峰时段动态调整",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "会员体验反馈直接影响教练续约",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "不做低价竞争",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "不追求快速规模化扩张",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "不接受加盟模式",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "高端定位→低流失率→稳定现金流",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "严格教练筛选→课程质量稳定→口碑传播",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "PURE",
+        "category": "高端精品健身",
+        "claim": "核心商圈选址→高租金→倒逼高客单价维持",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "全国门店数量较多，连锁规模大",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "以预付费年卡为主要营收来源",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "私教课程贡献重要收入占比",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "门店面积普遍较大，设备齐全",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "存在一定的会员续卡压力",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "销售团队有明确的业绩KPI考核",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "会籍顾问按月度目标执行",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "私教课消课率纳入教练考核",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "门店装修标准化执行",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "不做纯团课小型工作室模式",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "不走低价月卡路线",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "预付费模式→现金流前置→扩张驱动",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "大面积门店→高固定成本→依赖持续获客",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "威尔仕",
+        "category": "连锁综合健身",
+        "claim": "销售导向→会员体验争议→口碑两极化",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "采用月付制而非年卡预付",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "24小时营业模式",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "教练采用平台合作制而非雇佣制",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "拒绝访谈深度信息",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "严格控制单店投入成本",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "标准化装修快速复制",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "教练自主排课、平台抽成",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "不设销售岗位",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "不做预付费年卡",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "不设会籍销售团队",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "拒绝外部访谈合作（本次被拒）",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "月卡制→低门槛→高获客量→薄利多销",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "小面积门店→低租金→可快速扩张",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻",
+        "category": "互联网健身平台",
+        "claim": "平台化教练→人力成本灵活→毛利可控",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "以团课为核心产品",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "课程设计强调趣味性和社交属性",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "空间设计走网红风格",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "单店面积适中",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "课程需定期更新迭代",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "教练需具备表演力和感染力",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "社交媒体营销为主要获客渠道",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "不做传统器械区",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "不走年卡预付模式",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "网红风格→社交传播→自然获客",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "按次付费→用户无压力→复购靠体验",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "NRG",
+        "category": "精品团课工作室",
+        "claim": "课程趣味化→年轻群体粘性→但留存依赖持续创新",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "专注普拉提单一品类",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "器械普拉提为核心课程",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "教练培训体系自建",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "产后修复为重要获客场景",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "教练必须持有普拉提专业认证",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "新会员首次到店必须做体态评估",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "课程方案个性化定制",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "器械维护保养有严格周期",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "不开设有氧或力量训练区域",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "不做纯团课大班",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "不走低价引流路线",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "专注单品类→专业壁垒→差异化竞争",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "产后修复场景→强需求→高转化高客单",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "魔炼普拉提",
+        "category": "普拉提专项工作室",
+        "claim": "自建培训体系→教练供给可控→但扩张受限于培训速度",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "纯私教模式无团课",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练与会员配比极低（1:8-1:12）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "口碑转介绍为主要获客方式",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练收入水平行业领先",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练筛选淘汰率极高",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "每位会员有完整训练档案",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练需定期参加外部进修",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "不允许教练在社交媒体过度营销",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "会员投诉24小时内必须响应",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "不开设团课",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "不做年卡预付",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "不做任何形式的地推获客",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "不接受加盟",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "纯私教→高客单→低会员数量即可盈亏平衡",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "口碑获客→低营销成本→高利润率",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "教练高收入→低流失→服务稳定性→会员留存",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Z&B",
+        "category": "精品私教工作室",
+        "claim": "小面积门店→低租金→选址灵活",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "单车课程为唯一产品",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "强调灯光音乐的沉浸式体验",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "单店容纳30-50个骑行位",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "课程时长标准化45分钟",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "社区氛围运营是核心竞争力",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "教练需具备DJ选歌能力",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "课程音乐列表每周更新",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "灯光系统与音乐节奏联动",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "社群运营每周至少一次线下活动",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "不增设其他运动品类",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "不做线上直播课",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "不走低价路线",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "沉浸式体验→情绪价值→高复购",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "单一品类→运营简单→标准化强→可快速复制",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "社群运营→社交绑定→降低流失",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Flow Cycle",
+        "category": "动感单车精品工作室",
+        "claim": "场地利用率高（坪效优于传统健身房）",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "蹦极绳索辅助健身为核心产品",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "品类新颖在国内属早期市场",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "课程兼具趣味性和训练效果",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "器材专业度要求高（安全绳索系统）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "首次体验转化率高",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "每节课前必须做安全检查",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "绳索系统定期强制更换",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "教练需持有空中运动相关认证",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "体重限制严格执行",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "新会员必须从入门课开始",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "不接受超出体重限制的学员",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "不做无教练自助训练",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "不做线上课程",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "新品类→好奇心驱动→首次体验转化高",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "安全门槛高→竞争对手少→短期护城河",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "品类认知度低→市场教育成本高→规模化慢",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "ZERO G Bungee",
+        "category": "蹦极健身工作室",
+        "claim": "体验新奇→社交传播强→但长期留存靠训练效果",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "普拉提器械课和垫上课并行",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "品牌视觉设计时尚化",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "线上内容营销投入大",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "会员社群活跃度高",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "教练需通过品牌内部认证体系",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "新店开业前社群预热至少1个月",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "课程价格按城市线级差异化定价",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "会员满意度调研每季度执行",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "不做大班课",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "不做男性专项课程",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "不走加盟模式",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "小班制→个性化体验→高满意度→续费率高",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "时尚品牌定位→溢价空间→利润率优于普通工作室",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "线上内容营销→品牌认知→降低获客成本",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Yee Active普拉提",
+        "category": "普拉提工作室",
+        "claim": "严格限制班级人数→师资扩张成为增长瓶颈",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "完全按次付费无任何预付卡",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "微信小程序为主要约课渠道",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "课程品类丰富（搏击、瑜伽、舞蹈等）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "教练被打造为IP",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "爆款课经常满员需要抢位",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "教练考核以满座率为核心指标",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "课程上线需经过内测+用户评分",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "明星教练有独立IP运营",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "新课研发有专门团队负责",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "用户评分低于阈值的课程下架",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "不做年卡预付费",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "不设私教课程",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "不做24小时无人值守",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "按次付费→零决策门槛→高首次体验率",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "教练IP化→粉丝粘性→课程溢价",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "产品化课程研发→标准化高→可复制性强",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "超级猩猩",
+        "category": "互联网团课健身",
+        "claim": "纯团课无私教→客单价天花板→盈利靠坪效和翻台率",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "选址靠近居民社区",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "覆盖全年龄段用户群",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "提供器械区+团课+私教综合服务",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "价格相对亲民",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "门店面积中等",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "服务半径控制在周边3公里内",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "课程设置覆盖不同年龄需求",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "以口碑和社区传播为主要获客方式",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "教练需掌握多种课程类型",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "不追求高端商圈选址",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "不做纯线上模式",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "社区选址→租金可控→盈亏平衡门槛低",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "全年龄覆盖→扩大潜在用户池→但课程管理复杂度高",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "久博体育",
+        "category": "社区健身",
+        "claim": "亲民价格→低客单价→依赖会员规模",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "团课/自主训练/私教用户几乎不重叠",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "旗下有亿企练（企业健身服务平台）",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "CEO同管青橙和加力生活两个团队",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "已服务国家电网/移动/奔驰等大客户的企业差旅",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "SaaS支付通道返佣为免费版盈利模式",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "免费版功能受限，从交易流水中获得支付通道返佣",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "企业健身服务（亿企练）价格不可串货给健身通",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "SaaS商户中团课以周期卡为主流支付方案",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "统一定价不长久，建议差异定价+平台账户（点数/余额）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "亿企练供给不能串货给健身通（大企业专属价格承诺）",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "对羽毛球场馆几乎无对应商户",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "不直接从商户侧收取佣金",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "统一定价→商家价格反弹→建议差异定价促进获客竞争",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "企业差旅直连佣金模式→价格优势→大客户留存（国网差旅成本降1/3）",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "免费SaaS版→支付通道返佣→低门槛获客→市场份额扩张",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "青橙SaaS",
+        "category": "健身SaaS平台",
+        "claim": "飞盘俱乐部2000+（教练转型主理人）→交易低频→无法转化为SaaS付费用户",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "除SaaS外还做to G大型体育场馆和校园体育场馆方案",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "不从商户收取佣金，从平台返佣获利",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "历史上与阿里系合作较多",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "与抖音在洽谈合作",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "SaaS覆盖全链路：会员管理+业务管理+运营管理+数据分析",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "平台返佣分为CPS交易服务费模式",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "组织商户参加各大平台活动为核心代运营服务",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "以中大型连锁客户为主要服务对象",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "代运营为增值服务（客户成功部门）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "从公域到私域全链路打通为产品目标",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "每年有大型会销+分享会用于客户沟通",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "产研排期紧张，需平台政策倾斜才能优先对接",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "不从商户侧直接收取佣金",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "竞品信息不便直接分享",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "暂无美团相关商务策略",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "SaaS功能全覆盖→一个出口管理多平台→商户粘性高",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "西南垄断→竞争压力小→扩张动力来自新业务（to G/to B）",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "代运营模式→从平台赚返佣→商户免费→低门槛拓客",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "勤鸟SaaS",
+        "category": "健身SaaS平台",
+        "claim": "产研排期紧张→需平台政策激励→对接优先级由商务驱动",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "线下年卡1年及以上（3/5年卡）为主力售卖",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "美团暂无年卡供给（因佣金过高+团单金额受限）",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "拉新最主要活动形式：老带新（转介绍奖励）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "淡旺季分明：3-8月旺盛期不设深折扣，9月后设深折扣",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "3年内新店以拉新为主要流水来源",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "大促全门店必选参加",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "月度活动门店可选参加",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "活动形式：拉新产品+续费折扣+老带新奖励",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "旺季不设深折扣（甚至提价），淡季深折扣维持流水",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "不同门店等级+权益+时长组合形成不同商品价格",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "抖音年卡约为线下价格9折",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "美团不上年卡（佣金过高）",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "线上渠道不设全价长期卡",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "旺季不做深折扣",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "对平台价格折扣类活动效果存疑",
+        "layer": "exclusion",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "抖音低佣金→商户愿意上年卡→高GMV",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "美团高佣金→仅上引流品→平台定位为获客渠道而非交易平台",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "老店客群覆盖饱和→拉新极难→依赖续费维持",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "新店→拉新为流水主来源→更依赖外部渠道",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "老带新→实物奖励+会籍延长→高性价比获客",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "银吉姆",
+        "category": "商业健身房",
+        "claim": "线上低价引流供给→访购率低→商户认知'引流效果差'→恶性循环",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "96年老板创业，设计出身，爱好健身",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "教练每人负责20-30个学员",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "全部全职教练",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "使用三体云动SaaS（1800/年），评价'凑合'",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "企业客户：银行/汽车等，比例较小",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "淡季11月-2月，高峰下午4-10点",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "财务外包",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "通过'圈子'找教练/器械/培训资源",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "老板任何阶段都最重视拉新",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "教练通过电话/微信维护用户预约",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "追求人的服务而非软件效率",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "教练从培训学校/健身圈招聘",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "自己请人来培训教练（不外派考证）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "用SaaS大数据控制消耗品采购预算",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "约2年装修一次",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "不加盟",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "不做线上课/直播",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "不追求软件自动化取代人的服务",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "轻奢定位→追求人的服务→规模化受限于教练供给",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "全职教练→管理控制力强→成本高但稳定",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "Hercules",
+        "category": "精品私教工作室",
+        "claim": "圈子获资源→信任成本低→但视野受限",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "超猩价格89/109/149/169四档",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "健身通目标商品以团课为主",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "目标商户分3层：KA头部→CP活跃→MEM有团课团购",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "CP活跃商户定义：课程排课高且日均预订量>5",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "城市范围：暂在北上广深4城",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多品牌分析",
+        "category": "行业分析",
+        "claim": "Coreland等200+元/节商户不符合首期招商范围",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "羽毛球场馆纯场地生意难盈利（固定成本高利润薄）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "拼场本质是社交载体而非商业盈利",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "组织者多平台发布并用小号占位管理跨平台库存",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "羽毛球用户决策因素不是距离而是跟谁打",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "场馆通过卖球卖装备卖水+培训覆盖水电装修成本",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "黄金时段以场地预订形式售卖（优先包场用户）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "闲时以拼场活动形式提升利用率",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部通过群接龙+多平台发布+小号占位管理库存",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "新场馆需要俱乐部帮忙暖场冷启动",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "政府公益场馆不敢引流（怕客流过多无法履约）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "场馆开放时间无条件服从学校",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "T+7结算周期过长（对比韵动吧T+4）",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "不公开活动约1/9",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部稳定出货→场馆低管理成本→生态互依",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "平台佣金高于自有体系→有场馆资源的不缺流量→不愿合作",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "场地供给稀缺→场馆强势→跟场地预订走",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "俱乐部启动容易→稳定开场+好友转介绍→滚雪球增长",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "category": "球类场馆/拼场",
+        "claim": "多平台占位→隔离用户信息→防止流失至平台",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "上海60+门店，直营40+",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "分R/SR/SSR三级（纯篮球/+羽毛球/综合运动中心）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "篮球储值多馆通用，包场和散客收入约1:1",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "蚂蚁集团为大股东",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "旗下九回体育：共享健身房，上海二三十家，政府场地",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "每年搞青少年篮球赛已连续5年",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "私域心智成熟不缺流量，不愿付入驻费",
+        "layer": "rule",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "场馆类要求0MEM+超低佣金（纯通道费）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "健身类（九回）愿意支持MEM和佣金",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "门店上美团需门店自己要求才有动力",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "SSR馆+外部城市拓展时需要外部流量支持",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "无市场营销预算付入驻费",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "不看好蓝火花等组局活动平台（市场人群有限）",
+        "layer": "exclusion",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "私域成熟+场地稀缺→不缺流量→对平台合作低敏感",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "政府场地（九回）→无营业执照→合作障碍",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "抖音达人包→高流量→但需要好内容（亲子票受欢迎）",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "拓新城时才需外部流量→合作窗口在SSR馆开城期",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "洛克公园",
+        "category": "综合运动场馆连锁",
+        "claim": "场馆类利润薄→任何额外抽佣都不可接受→需通道费模式",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "7.22-7.25日均充值页UV约40，日均交易约6单",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "POI货架曝光UV日均约400，点击UV约67",
+        "layer": "fact",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "健身通货架仅在健身中心展示（待扩展至全运动类目）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "仅支持单价格段（限制了高价商户和多价格段商户入驻）",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "招商需逐个筛选确认+开白+通知上单（链路长）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "复制团单时不可设置为健身通商品（供应链瓶颈）",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "满座率/曝光UV是核心增长瓶颈指标",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "健身通券不可用于私教类商品",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "暂不扩展至新奇体验类目（hold）",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "招商无法规模化（需逐一人工确认）",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "充值页缺少可用门店信息→用户无法决策→需增加门店模块",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "单价格段限制→无法引入高价商户→供给覆盖受限",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "招商链路长→无法规模化→需系统捞单+活动招商双线",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "健身通产品（平台视角）",
+        "category": "产品运营数据",
+        "claim": "6张券包为主力→用户愿意批量购买→有提频潜力",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "旗下乐刻健身/FEELINGME/FITTRIBE三个子品牌",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "门店按7个等级定价会员卡",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "购买单店会员卡可通用于不高于该等级的其他门店",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "2023年新成立用户事业部统管用户运营",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "主要大促：3月/8月（8.8）/11月（双十一）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "FEELINGME提供私教包月（月/季/年）",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "美团定价因需适用所有门店→就高等级定价→比线下贵",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "私教按教练等级+课程内容定价，n节起售+满减",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "大促月份拉新和复购一起跑，通过折扣承接",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "老带新和订阅是常规之外效果最好的营销",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "23年核心诉求：①月卡销量↑ ②复购率↑ ③核销率↑",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "订阅扣费计划首月立减为高效留存手段",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "不在美团上售卖高等级门店会员卡（定价冲突）",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "体验卡优先级低（23年）",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "不设新客专属商品（倾向常规商品+新客立减）",
+        "layer": "exclusion",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "7级门店定价→美团需就高→线上价格失去竞争力→限制线上GMV",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "constrains"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "订阅制首月立减→降低尝试门槛→会员留存延长",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "Cross流量+体验卡→到店转化→但转化链路长",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "乐刻（深度营销分析）",
+        "category": "互联网健身平台",
+        "claim": "用户事业部新成立→跨部门整合→预计活动类型更丰富",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "美团在商户心中定位：获客渠道而非交易平台",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "商户4P中美团仅为渠道一环",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "健身行业访购率长期低于足疗等成熟行业",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "商户最优选择：外部渠道设计免费/低价到店引流产品",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "调研对象覆盖4类：商业健身房/私教工作室/团课工作室/新型健身房",
+        "layer": "fact",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "MEM+佣金模式下商户以极低成本完成引流拉新",
+        "layer": "fact",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "短期平台产品构成难以快速变化",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "平台营销能力重点：到店用户增长+提升访购",
+        "layer": "rule",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "到店用户增长≈行业交易用户增长",
+        "layer": "rule",
+        "domain": "interviewer_artifact",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "需围绕增量流量渠道设计转化产品",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "驱动商户提供营销玩法和转化供给→提升新客感知→增长飞轮",
+        "layer": "rule",
+        "domain": "industry_intrinsic",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "短期内无法改变低价引流供给为主的现状",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "不宜直接复用其他行业团购佣金模式",
+        "layer": "exclusion",
+        "domain": "platform_perspective",
+        "causal_role": "null"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "MEM+佣金模式→商户最优解为低价引流→线上充斥低价",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "低价供给→用户无法通过价格判断品质→访购率低",
+        "layer": "causal",
+        "domain": "platform_perspective",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "访购率低→商户认知'引流效果差'→加深'高引流成本'错误印象",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "drives"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "恶性循环飞轮：低价供给→低访购→商户不满→更不愿上核心供给",
+        "layer": "causal",
+        "domain": "interviewer_artifact",
+        "causal_role": "vetoes"
+      },
+      {
+        "merchant": "行业整体",
+        "category": "行业分析",
+        "claim": "破局点：增量渠道营销能力建设→商户提供转化供给→新客感知提升",
+        "layer": "causal",
+        "domain": "industry_intrinsic",
+        "causal_role": "drives"
+      }
+    ]
+  },
+  "exclusion_strategy_analysis": {
+    "total_exclusions": 42,
+    "merchants_with_exclusions": 19,
+    "exclusion_by_merchant": {
+      "PURE": [
+        "不做低价竞争",
+        "不追求快速规模化扩张",
+        "不接受加盟模式"
+      ],
+      "威尔仕": [
+        "不做纯团课小型工作室模式",
+        "不走低价月卡路线"
+      ],
+      "乐刻": [
+        "不做预付费年卡",
+        "不设会籍销售团队",
+        "拒绝外部访谈合作（本次被拒）"
+      ],
+      "NRG": [
+        "不做传统器械区",
+        "不走年卡预付模式"
+      ],
+      "魔炼普拉提": [
+        "不开设有氧或力量训练区域",
+        "不做纯团课大班"
+      ],
+      "Z&B": [
+        "不开设团课",
+        "不做年卡预付",
+        "不做任何形式的地推获客",
+        "不接受加盟"
+      ],
+      "Flow Cycle": [
+        "不增设其他运动品类",
+        "不做线上直播课",
+        "不走低价路线"
+      ],
+      "ZERO G Bungee": [
+        "不接受超出体重限制的学员",
+        "不做无教练自助训练",
+        "不做线上课程"
+      ],
+      "Yee Active普拉提": [
+        "不做大班课",
+        "不做男性专项课程",
+        "不走加盟模式"
+      ],
+      "超级猩猩": [
+        "不做年卡预付费",
+        "不设私教课程",
+        "不做24小时无人值守"
+      ],
+      "久博体育": [
+        "不追求高端商圈选址",
+        "不做纯线上模式"
+      ],
+      "青橙SaaS": [
+        "对羽毛球场馆几乎无对应商户"
+      ],
+      "勤鸟SaaS": [
+        "竞品信息不便直接分享"
+      ],
+      "银吉姆": [
+        "旺季不做深折扣"
+      ],
+      "Hercules": [
+        "不加盟",
+        "不做线上课/直播",
+        "不追求软件自动化取代人的服务"
+      ],
+      "多品牌分析": [
+        "Coreland等200+元/节商户不符合首期招商范围"
+      ],
+      "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）": [
+        "50%+非盈利俱乐部不接受额外抽佣",
+        "不公开活动约1/9"
+      ],
+      "健身通产品（平台视角）": [
+        "暂不扩展至新奇体验类目（hold）",
+        "招商无法规模化（需逐一人工确认）"
+      ],
+      "乐刻（深度营销分析）": [
+        "不设新客专属商品（倾向常规商品+新客立减）"
+      ]
+    },
+    "common_exclusion_patterns": [
+      [
+        "不做线上",
+        3
+      ],
+      [
+        "不接受加",
+        2
+      ],
+      [
+        "不做纯团",
+        2
+      ],
+      [
+        "不走低价",
+        2
+      ],
+      [
+        "不做年卡",
+        2
+      ],
+      [
+        "不做低价",
+        1
+      ],
+      [
+        "不追求快",
+        1
+      ],
+      [
+        "不做预付",
+        1
+      ],
+      [
+        "不设会籍",
+        1
+      ],
+      [
+        "不做传统",
+        1
+      ]
+    ]
+  },
+  "causal_role_matrix": {
+    "role_distribution": {
+      "drives": 72,
+      "constrains": 6,
+      "vetoes": 10
+    },
+    "null_count": 340,
+    "role_analysis": {
+      "drives": {
+        "count": 72,
+        "merchants": [
+          "Flow Cycle",
+          "Hercules",
+          "NRG",
+          "PURE",
+          "Yee Active普拉提",
+          "Z&B",
+          "ZERO G Bungee",
+          "久博体育",
+          "乐刻",
+          "乐刻（深度营销分析）",
+          "健身通产品（平台视角）",
+          "勤鸟SaaS",
+          "多品牌分析",
+          "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+          "威尔仕",
+          "洛克公园",
+          "行业整体",
+          "超级猩猩",
+          "银吉姆",
+          "青橙SaaS",
+          "魔炼普拉提"
+        ],
+        "merchant_count": 21,
+        "top_start_points": [
+          [
+            "小面积门店",
+            2
+          ],
+          [
+            "按次付费",
+            2
+          ],
+          [
+            "高端定位",
+            1
+          ],
+          [
+            "严格教练筛选",
+            1
+          ],
+          [
+            "核心商圈选址",
+            1
+          ]
+        ],
+        "sample_claims": [
+          "高端定位→低流失率→稳定现金流",
+          "严格教练筛选→课程质量稳定→口碑传播",
+          "核心商圈选址→高租金→倒逼高客单价维持",
+          "预付费模式→现金流前置→扩张驱动",
+          "大面积门店→高固定成本→依赖持续获客"
+        ]
+      },
+      "constrains": {
+        "count": 6,
+        "merchants": [
+          "Hercules",
+          "Yee Active普拉提",
+          "乐刻（深度营销分析）",
+          "超级猩猩",
+          "魔炼普拉提"
+        ],
+        "merchant_count": 5,
+        "top_start_points": [
+          [
+            "自建培训体系",
+            1
+          ],
+          [
+            "严格限制班级人数",
+            1
+          ],
+          [
+            "纯团课无私教",
+            1
+          ],
+          [
+            "轻奢定位",
+            1
+          ],
+          [
+            "圈子获资源",
+            1
+          ]
+        ],
+        "sample_claims": [
+          "自建培训体系→教练供给可控→但扩张受限于培训速度",
+          "严格限制班级人数→师资扩张成为增长瓶颈",
+          "纯团课无私教→客单价天花板→盈利靠坪效和翻台率",
+          "轻奢定位→追求人的服务→规模化受限于教练供给",
+          "圈子获资源→信任成本低→但视野受限"
+        ]
+      },
+      "vetoes": {
+        "count": 10,
+        "merchants": [
+          "健身通产品（平台视角）",
+          "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+          "洛克公园",
+          "行业整体",
+          "银吉姆",
+          "青橙SaaS"
+        ],
+        "merchant_count": 6,
+        "top_start_points": [
+          [
+            "团课/自训/私教用户不重叠",
+            1
+          ],
+          [
+            "飞盘俱乐部2000+（教练转型主理人）",
+            1
+          ],
+          [
+            "老店客群覆盖饱和",
+            1
+          ],
+          [
+            "平台佣金高于自有体系",
+            1
+          ],
+          [
+            "场馆类利润薄",
+            1
+          ]
+        ],
+        "sample_claims": [
+          "团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难",
+          "飞盘俱乐部2000+（教练转型主理人）→交易低频→无法转化为SaaS付费用户",
+          "老店客群覆盖饱和→拉新极难→依赖续费维持",
+          "平台佣金高于自有体系→有场馆资源的不缺流量→不愿合作",
+          "场馆类利润薄→任何额外抽佣都不可接受→需通道费模式"
+        ]
+      }
+    }
+  },
+  "schema_derived_conclusions": [
+    {
+      "conclusion": "跨文档因果关键词（6个商户）：平台",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Hercules",
+        "乐刻",
+        "勤鸟SaaS",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "洛克公园",
+        "银吉姆"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'平台'出现12次, 覆盖6个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（7个商户）：教练",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Hercules",
+        "PURE",
+        "Z&B",
+        "乐刻",
+        "超级猩猩",
+        "青橙SaaS",
+        "魔炼普拉提"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'教练'出现10次, 覆盖7个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（8个商户）：获客",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Hercules",
+        "NRG",
+        "Yee Active普拉提",
+        "Z&B",
+        "乐刻",
+        "威尔仕",
+        "银吉姆",
+        "青橙SaaS"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'获客'出现10次, 覆盖8个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（7个商户）：供给",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Hercules",
+        "健身通产品（平台视角）",
+        "多品牌分析",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "行业整体",
+        "银吉姆",
+        "魔炼普拉提"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'供给'出现10次, 覆盖7个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（8个商户）：体验",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Flow Cycle",
+        "NRG",
+        "Yee Active普拉提",
+        "ZERO G Bungee",
+        "乐刻（深度营销分析）",
+        "健身通产品（平台视角）",
+        "威尔仕",
+        "超级猩猩"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'体验'出现9次, 覆盖8个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（5个商户）：转化",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "ZERO G Bungee",
+        "乐刻（深度营销分析）",
+        "行业整体",
+        "青橙SaaS",
+        "魔炼普拉提"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'转化'出现7次, 覆盖5个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（6个商户）：扩张",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Yee Active普拉提",
+        "乐刻",
+        "勤鸟SaaS",
+        "威尔仕",
+        "青橙SaaS",
+        "魔炼普拉提"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'扩张'出现6次, 覆盖6个商户"
+    },
+    {
+      "conclusion": "跨文档因果关键词（5个商户）：会员",
+      "evidence_type": "cross_document_causal_keyword",
+      "merchants": [
+        "Hercules",
+        "Z&B",
+        "久博体育",
+        "乐刻（深度营销分析）",
+        "威尔仕"
+      ],
+      "confidence": "high（多文档交叉验证）",
+      "schema_basis": "causal entries中'会员'出现6次, 覆盖5个商户"
+    },
+    {
+      "conclusion": "经营模型「预付费年卡+私教」核心因果：预付费模式→现金流前置→扩张驱动",
+      "evidence_type": "model_cluster_causal",
+      "merchants": [
+        "威尔仕",
+        "银吉姆"
+      ],
+      "confidence": "medium（模型内验证）",
+      "schema_basis": "business_model=预付费年卡+私教, causal_count=6"
+    },
+    {
+      "conclusion": "经营模型「按次/课包制」核心因果：沉浸式体验→情绪价值→高复购",
+      "evidence_type": "model_cluster_causal",
+      "merchants": [
+        "Flow Cycle",
+        "ZERO G Bungee"
+      ],
+      "confidence": "medium（模型内验证）",
+      "schema_basis": "business_model=按次/课包制, causal_count=8"
+    },
+    {
+      "conclusion": "经营模型「会员制+团课」核心因果：高端定位→低流失率→稳定现金流",
+      "evidence_type": "model_cluster_causal",
+      "merchants": [
+        "PURE"
+      ],
+      "confidence": "medium（模型内验证）",
+      "schema_basis": "business_model=会员制+团课, causal_count=3"
+    },
+    {
+      "conclusion": "经营模型「按次付费/课包制」核心因果：网红风格→社交传播→自然获客",
+      "evidence_type": "model_cluster_causal",
+      "merchants": [
+        "NRG"
+      ],
+      "confidence": "medium（模型内验证）",
+      "schema_basis": "business_model=按次付费/课包制, causal_count=3"
+    },
+    {
+      "conclusion": "行业共识性排除策略：不做线上（3个商户明确排除）",
+      "evidence_type": "exclusion_consensus",
+      "merchants": [
+        "PURE",
+        "威尔仕",
+        "乐刻",
+        "NRG",
+        "魔炼普拉提",
+        "Z&B",
+        "Flow Cycle",
+        "ZERO G Bungee",
+        "Yee Active普拉提",
+        "超级猩猩",
+        "久博体育",
+        "青橙SaaS",
+        "勤鸟SaaS",
+        "银吉姆",
+        "Hercules",
+        "多品牌分析",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "健身通产品（平台视角）",
+        "乐刻（深度营销分析）"
+      ],
+      "confidence": "medium（多商户排除一致）",
+      "schema_basis": "layer=exclusion, pattern='不做线上', count=3"
+    },
+    {
+      "conclusion": "行业否定性因果（vetoes）：团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难",
+      "evidence_type": "causal_veto",
+      "merchants": [
+        "健身通产品（平台视角）",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "洛克公园",
+        "行业整体",
+        "银吉姆",
+        "青橙SaaS"
+      ],
+      "confidence": "medium（否定性约束）",
+      "schema_basis": "causal_role=vetoes, count=10"
+    },
+    {
+      "conclusion": "行业约束性因果（constrains）：自建培训体系→教练供给可控→但扩张受限于培训速度",
+      "evidence_type": "causal_constrain",
+      "merchants": [
+        "Hercules",
+        "Yee Active普拉提",
+        "乐刻（深度营销分析）",
+        "超级猩猩",
+        "魔炼普拉提"
+      ],
+      "confidence": "medium（约束性限制）",
+      "schema_basis": "causal_role=constrains, count=6"
+    },
+    {
+      "conclusion": "已验证结论（industry_intrinsic）：门店面积小（300-500平米）",
+      "evidence_type": "adopted_confidence",
+      "merchants": [
+        "Flow Cycle",
+        "Hercules",
+        "Yee Active普拉提",
+        "Z&B",
+        "乐刻",
+        "乐刻（深度营销分析）",
+        "健身通产品（平台视角）",
+        "勤鸟SaaS",
+        "多品牌分析",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "洛克公园",
+        "银吉姆",
+        "青橙SaaS",
+        "魔炼普拉提"
+      ],
+      "confidence": "high（confidence=adopted）",
+      "schema_basis": "confidence=adopted, domain=industry_intrinsic, count=55"
+    },
+    {
+      "conclusion": "已验证结论（platform_perspective）：收入GTV 29亿，店月均现金收入10万",
+      "evidence_type": "adopted_confidence",
+      "merchants": [
+        "Hercules",
+        "乐刻（深度营销分析）",
+        "健身通产品（平台视角）",
+        "多品牌分析",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "洛克公园",
+        "行业整体",
+        "银吉姆",
+        "青橙SaaS"
+      ],
+      "confidence": "high（confidence=adopted）",
+      "schema_basis": "confidence=adopted, domain=platform_perspective, count=21"
+    },
+    {
+      "conclusion": "已验证结论（interviewer_artifact）：CP单日（北上广深杭）课程2504节，总容量10525人，实际预订1201人",
+      "evidence_type": "adopted_confidence",
+      "merchants": [
+        "健身通产品（平台视角）",
+        "多品牌分析",
+        "多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）",
+        "洛克公园"
+      ],
+      "confidence": "high（confidence=adopted）",
+      "schema_basis": "confidence=adopted, domain=interviewer_artifact, count=16"
+    }
+  ]
+}

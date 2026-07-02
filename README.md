@@ -6,23 +6,31 @@
 
 ```
 fitness-knowledge-schema/
-├── SKILL.md                         # Schema 主文档（Agent 元数据约束与结构规范 v0.2.0）
-├── data/                            # 知识库数据文件
-│   ├── knowhow-upgraded.json        # 升级后的知识库（Schema 2.0 格式，428 条）
-│   ├── knowhow-raw-metadata.json    # 原始提取元数据
-│   └── knowhow-extraction-summary.md # 提取过程摘要
-├── dashboards/                      # 可视化仪表盘
-│   ├── knowhow-upgraded-dashboard.html   # 主仪表盘（18 主题聚类 + 因果角色 + 置信度）
+├── SKILL.md                              # Schema 主文档（v0.2.0，唯一事实来源）
+├── data/                                 # 三层数据架构
+│   ├── raw/                              # 第一层：原始数据（学城直接提取）
+│   │   ├── knowhow-raw-metadata.json     #   原始元数据（21篇文档，扁平字符串）
+│   │   └── knowhow-extraction-summary.md #   提取过程摘要（含学城原始结论）
+│   ├── structured/                       # 第二层：结构化数据（Schema 2.0 格式）
+│   │   └── knowhow-upgraded.json         #   升级后知识库（428条，layer/domain/causal_role）
+│   └── analysis/                         # 第三层：分析运算（Schema 推导结论）
+│       ├── schema-diagnostic-report.json #   诊断分析 JSON 报告（5维度，18条结论）
+│       └── schema-vs-xuecheng-comparison.md # Schema结论 vs 学城结论对比报告
+├── dashboards/                           # 可视化仪表盘
+│   ├── knowhow-upgraded-dashboard.html   # 主仪表盘（18主题 + 因果角色 + 置信度）
 │   ├── knowhow-bias-audit-dashboard.html # 偏见审计仪表盘
 │   └── knowhow-clustering-dashboard.html # 聚类分析仪表盘
 ├── docs/
-│   └── processing-logs/             # 每次对话加工的日志
+│   └── processing-logs/                  # 每次对话加工的日志
 │       ├── 2026-06-26-initial-extraction.md
 │       ├── 2026-06-29-schema-upgrade-and-clustering.md
-│       └── 2026-06-30-skill-sync-to-v0.2.0.md
+│       ├── 2026-06-30-skill-sync-to-v0.2.0.md
+│       ├── 2026-07-02-three-layer-analysis.md
+│       └── TEMPLATE.md
 ├── scripts/
-│   └── sync-skill.sh                # 同步 SKILL.md 到 CatPaw Skill 目录
-├── CHANGELOG.md                     # 变更日志
+│   ├── sync-skill.sh                     # 同步 SKILL.md 到 CatPaw Skill 目录
+│   └── schema_diagnostic_analyzer.py     # Schema 诊断分析脚本
+├── CHANGELOG.md                          # 变更日志
 └── .gitignore
 ```
 
