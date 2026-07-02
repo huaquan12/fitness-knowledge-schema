@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know-how 聚类实验 · 运动健身行业知识图谱</title>
+<style>
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface2: #243447;
+  --accent: #4ecdc4;
+  --accent2: #ff6b6b;
+  --accent3: #ffd93d;
+  --accent4: #6c5ce7;
+  --accent5: #a29bfe;
+  --text: #e8ecf0;
+  --text-dim: #8899a6;
+  --border: #2d4052;
+  --r: 10px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg); color: var(--text);
+  line-height: 1.55; font-size: 13px;
+  padding: 12px;
+  /* force no horizontal scroll */
+  width: 100%; max-width: 100vw; overflow-x: hidden;
+}
+
+/* === HEADER === */
+.hdr { text-align:center; margin-bottom:16px; }
+.hdr h1 {
+  font-size: 1.5em; font-weight:700;
+  background: linear-gradient(135deg, var(--accent), var(--accent5));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  word-break: break-word;
+}
+.hdr .sub { color:var(--text-dim); font-size:0.85em; margin-top:4px; }
+
+/* === STATS === */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.st {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius: var(--r); padding: 8px 4px; text-align:center;
+}
+.st .v { font-size:1.4em; font-weight:700; color:var(--accent); }
+.st .l { font-size:0.65em; color:var(--text-dim); }
+
+/* === SECTION === */
+.sec {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r); padding:12px; margin-bottom:12px;
+}
+.sec h2 {
+  font-size:1.05em; color:var(--accent); margin-bottom:10px;
+  border-bottom:1px solid var(--border); padding-bottom:6px;
+}
+.sec h3 {
+  font-size:0.9em; color:var(--accent5); margin:12px 0 6px;
+}
+.dim { color:var(--text-dim); font-size:0.8em; }
+
+/* === FLOW === */
+.flow { text-align:center; }
+.flow .node {
+  display:inline-block; width:100%;
+  background:var(--surface2); border:2px solid var(--accent);
+  border-radius:var(--r); padding:10px; margin:4px 0;
+  text-align:center;
+}
+.flow .node.l2 { border-color:var(--accent3); }
+.flow .node.l3 { border-color:var(--accent2); }
+.flow .node b { display:block; font-size:1em; }
+.flow .node small { color:var(--text-dim); font-size:0.75em; }
+.flow .arrow { color:var(--text-dim); font-size:1.2em; display:block; }
+
+/* === BAR CHART === */
+.bar { display:flex; align-items:center; margin-bottom:4px; gap:4px; }
+.bar .bl { width:65px; font-size:0.7em; color:var(--text-dim); text-align:right; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.bar .bt { flex:1; height:18px; background:var(--surface2); border-radius:4px; overflow:hidden; }
+.bar .bf {
+  height:100%; border-radius:4px; display:flex; align-items:center;
+  padding-left:4px; font-size:0.65em; font-weight:600;
+  transition: width 0.6s ease;
+}
+
+.c0 { background: linear-gradient(90deg,#4ecdc4,#3ab5ad); }
+.c1 { background: linear-gradient(90deg,#667eea,#5570d6); }
+.c2 { background: linear-gradient(90deg,#ff6b6b,#e05d5d); }
+.c3 { background: linear-gradient(90deg,#ffd93d,#e0c235); color:#333; }
+.c4 { background: linear-gradient(90deg,#a29bfe,#8e87ee); }
+.c5 { background: linear-gradient(90deg,#fd79a8,#e56d96); }
+.c6 { background: linear-gradient(90deg,#00b894,#009e7e); }
+.c7 { background: linear-gradient(90deg,#e17055,#cc6349); }
+.c8 { background: linear-gradient(90deg,#74b9ff,#5fa8ee); }
+.c9 { background: linear-gradient(90deg,#dfe6e9,#c5ced2); color:#333; }
+.c10 { background: linear-gradient(90deg,#b2bec3,#9eaaaf); color:#333; }
+
+/* === CLUSTER === */
+.clu {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--r); padding:10px; margin-bottom:8px;
+}
+.clu .cid { font-size:0.7em; color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+.tags { display:flex; flex-wrap:wrap; gap:3px; margin-bottom:6px; }
+.tag {
+  background:rgba(78,205,196,0.15); border:1px solid rgba(78,205,196,0.3);
+  padding:2px 6px; border-radius:12px; font-size:0.7em; color:var(--accent);
+}
+
+/* === CAUSAL === */
+.csl {
+  background:var(--surface2); border-left:3px solid var(--accent4);
+  padding:8px 8px 8px 10px; border-radius:0 6px 6px 0;
+  font-size:0.8em; margin-bottom:6px;
+}
+.csl .mb {
+  display:inline-block; background:rgba(108,92,231,0.2); color:var(--accent4);
+  padding:1px 5px; border-radius:8px; font-size:0.7em; margin-right:4px;
+}
+.csl .ab {
+  display:inline-block; padding:1px 5px; border-radius:8px;
+  font-size:0.65em; font-weight:600; margin-left:3px;
+}
+.ab-e { background:rgba(78,205,196,0.2); color:var(--accent); }
+.ab-b { background:rgba(255,107,107,0.2); color:var(--accent2); }
+.ab-t { background:rgba(255,217,61,0.2); color:var(--accent3); }
+
+/* === INSIGHT === */
+.ins {
+  background:var(--surface2); border:1px solid var(--border);
+  border-radius:var(--r); padding:10px; margin-bottom:8px;
+}
+.ins .ih { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+.ins .it { font-weight:600; color:var(--accent3); font-size:0.9em; }
+.ins .ic { font-size:0.7em; color:var(--text-dim); background:var(--surface); padding:2px 6px; border-radius:10px; }
+.ins .ik { font-size:0.8em; color:var(--text); line-height:1.4; margin-bottom:6px; }
+.ins .im { display:flex; flex-wrap:wrap; gap:3px; }
+.ins .im span {
+  font-size:0.6em; background:rgba(255,217,61,0.1);
+  border:1px solid rgba(255,217,61,0.3); padding:1px 5px;
+  border-radius:8px; color:var(--accent3);
+}
+
+/* === SIMILARITY === */
+.stbl { width:100%; border-collapse:collapse; font-size:0.75em; }
+.stbl th,.stbl td { padding:5px 4px; text-align:left; border-bottom:1px solid var(--border); }
+.stbl th { color:var(--text-dim); font-weight:500; }
+.ss { display:inline-block; padding:2px 6px; border-radius:8px; font-weight:600; font-size:0.85em; }
+.ss-h { background:rgba(78,205,196,0.2); color:var(--accent); }
+.ss-m { background:rgba(162,155,254,0.2); color:var(--accent5); }
+.ss-l { background:rgba(255,107,107,0.1); color:var(--text-dim); }
+
+/* === RADAR === */
+.rcard {
+  background:var(--surface2); border-radius:var(--r);
+  padding:8px; margin-bottom:8px;
+}
+.rcard .rt { font-size:0.8em; font-weight:600; margin-bottom:6px; }
+.rb { display:flex; align-items:center; gap:4px; margin-bottom:3px; }
+.rb .rl { width:55px; font-size:0.6em; color:var(--text-dim); text-align:right; flex-shrink:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.rb .rbt { flex:1; height:10px; background:var(--surface); border-radius:3px; overflow:hidden; }
+.rb .rbf { height:100%; border-radius:3px; background:linear-gradient(90deg,var(--accent4),var(--accent)); }
+
+/* MATRIX ROW */
+.mrow { margin-bottom:6px; }
+.mrow .ml { font-size:0.7em; color:var(--text-dim); margin-bottom:2px; }
+.mrow .mb { display:flex; gap:2px; height:14px; }
+.mrow .mb div { flex:1; background:var(--surface2); border-radius:3px; overflow:hidden; position:relative; }
+.mrow .mb div span {
+  position:absolute; right:2px; top:0; font-size:0.55em; color:var(--text-dim);
+}
+.mrow .mb .mf { height:100%; border-radius:3px; opacity:0.75; }
+
+/* Divider */
+.divider {
+  text-align:center; color:var(--accent); font-weight:700;
+  font-size:1.1em; margin:20px 0 12px;
+  border-top:1px solid var(--border); padding-top:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>Know-how 聚类实验</h1>
+  <div class="sub">21篇运动健身行业文档 · 428条结构化知识 · 多维度聚类分析</div>
+</div>
+
+<div class="stats">
+  <div class="st"><div class="v">21</div><div class="l">文档数</div></div>
+  <div class="st"><div class="v">339</div><div class="l">知识条目</div></div>
+  <div class="st"><div class="v">89</div><div class="l">因果链</div></div>
+  <div class="st"><div class="v">18</div><div class="l">商户聚类</div></div>
+  <div class="st"><div class="v">6</div><div class="l">聚类簇</div></div>
+  <div class="st"><div class="v">10</div><div class="l">跨商户共识</div></div>
+</div>
+
+<!-- ============ 1. 全景概览 ============ -->
+<div class="divider">1 · 全景概览</div>
+
+<div class="sec">
+  <h2>三层模型架构</h2>
+  <div class="flow">
+    <div class="node"><b>采集层</b><small>172 facts + 106 rules + 61 exclusions</small></div>
+    <span class="arrow">↓</span>
+    <div class="node l2"><b>分析层</b><small>89 causal chains · 11 themes · 6 archetypes</small></div>
+    <span class="arrow">↓</span>
+    <div class="node l3"><b>沉淀层</b><small>10 convergent insights · 6 merchant clusters</small></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>主题分布全景</h2>
+  <div id="themeChart"></div>
+</div>
+
+<div class="sec">
+  <h2>因果链类型分布</h2>
+  <div id="archChart"></div>
+</div>
+
+<!-- ============ 2. 主题聚类 ============ -->
+<div class="divider">2 · 主题聚类</div>
+
+<div class="sec">
+  <h2>主题 × 条目类型</h2>
+  <div class="dim" style="margin-bottom:8px;">
+    <span style="color:var(--accent);">■</span> 事实
+    <span style="color:var(--accent3);">■</span> 规则
+    <span style="color:var(--accent2);">■</span> 排除项
+  </div>
+  <div id="themeMatrix"></div>
+</div>
+
+<div class="sec">
+  <h2>商户主题画像</h2>
+  <div id="radarCards"></div>
+</div>
+
+<!-- ============ 3. 因果图谱 ============ -->
+<div class="divider">3 · 因果图谱</div>
+
+<div class="sec">
+  <h2>因果链统计</h2>
+  <div class="stats" style="margin-bottom:0">
+    <div class="st"><div class="v" style="font-size:1.2em">3.03</div><div class="l">平均链长</div></div>
+    <div class="st"><div class="v" style="font-size:1.2em">4</div><div class="l">最大链长</div></div>
+    <div class="st"><div class="v" style="font-size:1.2em">84%</div><div class="l">3节点链</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h3>Enabler 促进链（代表性）</h3>
+  <div id="causalE"></div>
+  <h3>Blocker 阻断链</h3>
+  <div id="causalB"></div>
+  <h3>Tradeoff 权衡链</h3>
+  <div id="causalT"></div>
+</div>
+
+<!-- ============ 4. 商户聚类 ============ -->
+<div class="divider">4 · 商户聚类</div>
+
+<div class="sec">
+  <h2>6 个聚类簇</h2>
+  <div class="dim" style="margin-bottom:8px;">基于知识条目主题向量余弦相似度（阈值0.80）</div>
+  <div id="clusterCards"></div>
+</div>
+
+<div class="sec">
+  <h2>相似度 Top 15</h2>
+  <table class="stbl" id="simTable">
+    <thead><tr><th>商户A</th><th>商户B</th><th>相似度</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- ============ 5. 共识发现 ============ -->
+<div class="divider">5 · 跨商户共识</div>
+
+<div class="sec">
+  <h2>高置信度共识</h2>
+  <div class="dim" style="margin-bottom:8px;">同一主题下 3+ 商户独立验证的因果观察</div>
+  <div id="insightCards"></div>
+</div>
+
+<script>
+// === DATA ===
+const themes = {"供给与课程":87,"其他":71,"定价与佣金":59,"用户行为":58,"获客与渠道":52,"组织与人员":30,"SaaS与系统":30,"商户经营":28,"场地与空间":21,"活动与营销":17,"竞争与市场":11};
+const archetypes = {"enabler":88,"threshold":12,"tradeoff":12,"blocker":9,"vicious_cycle":2,"flywheel":2};
+const themeByType = {
+  fact:{"供给与课程":40,"用户行为":38,"其他":36,"定价与佣金":26,"获客与渠道":25,"商户经营":17,"SaaS与系统":16,"场地与空间":12,"组织与人员":9,"活动与营销":8,"竞争与市场":5},
+  rule:{"供给与课程":35,"组织与人员":19,"用户行为":19,"获客与渠道":18,"其他":15,"定价与佣金":15,"SaaS与系统":11,"商户经营":9,"活动与营销":7,"场地与空间":7,"竞争与市场":1},
+  exclusion:{"其他":20,"定价与佣金":18,"供给与课程":12,"获客与渠道":9,"竞争与市场":5,"SaaS与系统":3,"组织与人员":2,"场地与空间":2,"商户经营":2,"活动与营销":2,"用户行为":1}
+};
+
+const clusters = [
+  {id:1,label:"课程驱动型",members:["PURE","NRG","魔炼普拉提","Z&B","Flow Cycle","ZERO G","Yee Active","超级猩猩","久博体育","Hercules"],desc:"以课程/教练为核心资产"},
+  {id:2,label:"连锁规模型",members:["威尔仕","乐刻"],desc:"重获客渠道与规模效应"},
+  {id:3,label:"平台生态型",members:["青橙SaaS","乐刻(深度)"],desc:"SaaS/平台视角"},
+  {id:4,label:"区域SaaS型",members:["勤鸟SaaS"],desc:"区域垄断+代运营"},
+  {id:5,label:"区域连锁型",members:["银吉姆"],desc:"预付费年卡+渠道博弈"},
+  {id:6,label:"场地资源型",members:["洛克公园","球类场馆"],desc:"场地稀缺，私域心智成熟"}
+];
+
+const simTop = [
+  {a:"PURE",b:"NRG",s:0.949},{a:"Flow Cycle",b:"ZERO G",s:0.944},{a:"NRG",b:"ZERO G",s:0.933},
+  {a:"PURE",b:"Flow Cycle",s:0.927},{a:"NRG",b:"Flow Cycle",s:0.919},{a:"PURE",b:"ZERO G",s:0.916},
+  {a:"魔炼普拉提",b:"Z&B",s:0.907},{a:"Z&B",b:"Hercules",s:0.897},{a:"魔炼普拉提",b:"Hercules",s:0.891},
+  {a:"超级猩猩",b:"NRG",s:0.882},{a:"超级猩猩",b:"Flow Cycle",s:0.876},{a:"威尔仕",b:"乐刻",s:0.854},
+  {a:"青橙SaaS",b:"乐刻(深度)",s:0.843},{a:"洛克公园",b:"球类场馆",s:0.831},{a:"Yee Active",b:"魔炼普拉提",s:0.822}
+];
+
+const causalE = [
+  {m:"青橙SaaS",t:"免费SaaS版→支付通道返佣→低门槛获客→市场份额扩张"},
+  {m:"Hercules",t:"点评获客80%→对平台依赖度极高→淡季需增加运营投入"},
+  {m:"球类场馆",t:"俱乐部稳定出货→场馆低管理成本→生态互依"},
+  {m:"乐刻",t:"订阅制首月立减→降低尝试门槛→会员留存延长"},
+  {m:"健身通",t:"8-10点数覆盖50%+用户→80-100元为最优定价区间"},
+];
+const causalB = [
+  {m:"球类场馆",t:"场馆不愿接受7%佣金（超过自身收佣5%）"},
+  {m:"青橙SaaS",t:"亿企练供给不能串货给健身通（大企业专属价格承诺）"},
+  {m:"洛克公园",t:"政府场地（九回）→无营业执照→合作障碍"},
+  {m:"健身通",t:"招商链路长→无法规模化→需系统捞单+活动招商双线"},
+];
+const causalT = [
+  {m:"Hercules",t:"全职教练→管理控制力强→成本高但稳定"},
+  {m:"Hercules",t:"轻奢定位→追求人的服务→规模化受限于教练供给"},
+  {m:"青橙SaaS",t:"团课/自训/私教用户不重叠→运动偏好固化→跨品类转化难"},
+  {m:"球类场馆",t:"拼场为社交载体→熟人局为主→平台最多切10%交易"},
+  {m:"洛克公园",t:"场馆类利润薄→任何额外抽佣都不可接受→需通道费模式"},
+];
+
+const insights = [
+  {theme:"定价与佣金",count:16,merchants:["PURE","威尔仕","乐刻","Z&B","超级猩猩","银吉姆","青橙","洛克公园"],key:"佣金率是商户与平台博弈的核心变量。7%佣金被场馆类一致拒绝，1-3%为接受上限。抖音低佣金正在虹吸高GMV商品。"},
+  {theme:"供给与课程",count:15,merchants:["PURE","NRG","魔炼普拉提","Z&B","Flow Cycle","ZERO G","Yee Active","超级猩猩"],key:"课程品质与教练质量的因果链高度收敛：严格筛选教练→服务质量→口碑→低获客成本→高续约率。"},
+  {theme:"用户行为",count:13,merchants:["PURE","Z&B","超级猩猩","乐刻","银吉姆","Hercules","青橙","健身通"],key:"团课/自训/私教用户群几乎不重叠，运动偏好一旦形成很难跨品类转化。按次付费降低决策门槛但天花板明显。"},
+  {theme:"获客与渠道",count:12,merchants:["银吉姆","Hercules","威尔仕","乐刻","洛克公园","超级猩猩","Z&B","NRG"],key:"老带新/裂变是所有商户一致认可的最高效获客方式。私域心智成熟的商户对平台合作兴趣极低。"},
+  {theme:"商户经营",count:12,merchants:["银吉姆","Hercules","威尔仕","洛克公园","球类","久博","PURE","Z&B"],key:"淡旺季策略高度分化：旺季提价/不折扣，淡季深折扣维持流水。5年+老店拉新难度指数级增长。"},
+  {theme:"SaaS与系统",count:8,merchants:["青橙","勤鸟","洛克公园","Hercules","乐刻","银吉姆"],key:"SaaS市场集中度高（青橙41%），免费版通过支付通道返佣盈利。商户对SaaS评价普遍'凑合'。"},
+  {theme:"场地与空间",count:7,merchants:["洛克公园","球类","PURE","NRG","Flow Cycle","ZERO G","久博"],key:"场地稀缺→场馆强势→不接受佣金。纯场地生意难盈利，需配套增值服务。"},
+  {theme:"组织与人员",count:6,merchants:["魔炼普拉提","Z&B","Hercules","超级猩猩","PURE","久博"],key:"教练是精品工作室的核心资产和最大风险：教练流失=会员流失。"},
+  {theme:"活动与营销",count:6,merchants:["银吉姆","乐刻","威尔仕","行业整体","超级猩猩","健身通"],key:"全年4次大促为行业节奏共识（3/6/8/12月），平台折扣活动效果存疑。"},
+  {theme:"竞争与市场",count:5,merchants:["青橙","勤鸟","威尔仕","银吉姆","行业整体"],key:"市场呈'头部集中+长尾碎片化'，区域垄断明显。"},
+];
+
+const merchantProfiles = {
+  "PURE":{"供给与课程":0.30,"用户行为":0.15,"组织与人员":0.10,"获客与渠道":0.10},
+  "威尔仕":{"获客与渠道":0.25,"定价与佣金":0.20,"商户经营":0.15,"供给与课程":0.15},
+  "乐刻":{"供给与课程":0.20,"获客与渠道":0.20,"SaaS与系统":0.15,"定价与佣金":0.15},
+  "超级猩猩":{"供给与课程":0.35,"定价与佣金":0.20,"获客与渠道":0.15},
+  "银吉姆":{"定价与佣金":0.25,"获客与渠道":0.20,"活动与营销":0.15,"商户经营":0.15},
+  "Hercules":{"供给与课程":0.25,"组织与人员":0.20,"商户经营":0.15,"获客与渠道":0.15},
+  "青橙SaaS":{"SaaS与系统":0.25,"用户行为":0.20,"供给与课程":0.15,"定价与佣金":0.15},
+  "洛克公园":{"场地与空间":0.25,"SaaS与系统":0.20,"定价与佣金":0.15,"用户行为":0.15},
+  "球类场馆":{"场地与空间":0.30,"定价与佣金":0.20,"获客与渠道":0.15,"商户经营":0.15},
+};
+
+// === RENDER ===
+function bar(id, d) {
+  const el = document.getElementById(id);
+  const max = Math.max(...Object.values(d));
+  el.innerHTML = Object.entries(d).map(([k,v],i) =>
+    `<div class="bar"><div class="bl">${k}</div><div class="bt"><div class="bf c${i%11}" style="width:${(v/max*100).toFixed(1)}%">${v}</div></div></div>`
+  ).join('');
+}
+
+function causal(id, items, cls) {
+  document.getElementById(id).innerHTML = items.map(c =>
+    `<div class="csl"><span class="mb">${c.m}</span>${c.t}<span class="ab ${cls}">${cls.replace('ab-','')}</span></div>`
+  ).join('');
+}
+
+// Theme chart
+bar('themeChart', themes);
+bar('archChart', archetypes);
+
+// Theme × Type matrix
+const matrixEl = document.getElementById('themeMatrix');
+const allThemes = Object.keys(themes).filter(t => t !== '其他');
+const tColors = {fact:'var(--accent)', rule:'var(--accent3)', exclusion:'var(--accent2)'};
+matrixEl.innerHTML = allThemes.map(t => {
+  const vals = {fact: themeByType.fact[t]||0, rule: themeByType.rule[t]||0, exclusion: themeByType.exclusion[t]||0};
+  return `<div class="mrow"><div class="ml">${t}</div><div class="mb">${
+    ['fact','rule','exclusion'].map(type => {
+      const v = vals[type]; const pct = (v/50*100);
+      return `<div><div class="mf" style="width:${pct}%;background:${tColors[type]}"></div><span>${v}</span></div>`;
+    }).join('')
+  }</div></div>`;
+}).join('');
+
+// Clusters
+document.getElementById('clusterCards').innerHTML = clusters.map(c =>
+  `<div class="clu"><div class="cid">Cluster ${c.id} · ${c.label}</div><div class="tags">${
+    c.members.map(m => `<span class="tag">${m}</span>`).join('')
+  }</div><div class="dim">${c.desc}</div></div>`
+).join('');
+
+// Similarity table
+document.querySelector('#simTable tbody').innerHTML = simTop.map(s => {
+  const cls = s.s>=0.9?'ss-h':s.s>=0.85?'ss-m':'ss-l';
+  return `<tr><td>${s.a}</td><td>${s.b}</td><td><span class="ss ${cls}">${(s.s*100).toFixed(1)}%</span></td></tr>`;
+}).join('');
+
+// Causal
+causal('causalE', causalE, 'ab-e');
+causal('causalB', causalB, 'ab-b');
+causal('causalT', causalT, 'ab-t');
+
+// Insights
+document.getElementById('insightCards').innerHTML = insights.map(ins =>
+  `<div class="ins"><div class="ih"><span class="it">${ins.theme}</span><span class="ic">${ins.count}商户</span></div><div class="ik">${ins.key}</div><div class="im">${
+    ins.merchants.map(m => `<span>${m}</span>`).join('')
+  }</div></div>`
+).join('');
+
+// Radar cards
+const radarThemes = ['供给与课程','定价与佣金','获客与渠道','用户行为','SaaS与系统','场地与空间','组织与人员','商户经营'];
+document.getElementById('radarCards').innerHTML = Object.entries(merchantProfiles).map(([name, prof]) =>
+  `<div class="rcard"><div class="rt">${name}</div>${
+    radarThemes.map(t => {
+      const v = prof[t]||0;
+      return `<div class="rb"><div class="rl">${t}</div><div class="rbt"><div class="rbf" style="width:${v*280}%"></div></div></div>`;
+    }).join('')
+  }</div>`
+).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know-how 数据偏差审计报告</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --canvas: #1a1d27;
+  --canvas-subtle: #222631;
+  --border: #2d3142;
+  --border-light: #3a3f52;
+  --text-primary: #e8eaed;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --accent: #6366f1;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --red: #ef4444;
+  --orange: #f97316;
+  --radius: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 0.8rem; color: var(--accent); }
+h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; color: var(--text-secondary); }
+p { margin-bottom: 0.8rem; color: var(--text-secondary); }
+.subtitle { color: var(--text-tertiary); font-size: 0.85rem; margin-bottom: 2rem; }
+
+/* 总览卡片 */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+}
+.stat-number { font-size: 1.8rem; font-weight: 700; }
+.stat-label { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 0.3rem; }
+.stat-card.total .stat-number { color: var(--text-primary); }
+.stat-card.intrinsic .stat-number { color: var(--green); }
+.stat-card.platform .stat-number { color: var(--yellow); }
+.stat-card.artifact .stat-number { color: var(--red); }
+
+/* 堆叠条 */
+.stack-bar-container {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+.stack-bar {
+  display: flex;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.stack-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.stack-segment.green { background: var(--green); color: #fff; }
+.stack-segment.yellow { background: var(--yellow); color: #fff; }
+.stack-segment.red { background: var(--red); color: #fff; }
+.stack-legend {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 0.4rem; }
+.legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+/* 分类框架 */
+.framework-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.framework-card {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-left: 3px solid;
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+.framework-card.intrinsic { border-left-color: var(--green); }
+.framework-card.platform { border-left-color: var(--yellow); }
+.framework-card.artifact { border-left-color: var(--red); }
+.framework-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+.framework-criteria { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.3rem; }
+.framework-test { font-size: 0.78rem; color: var(--text-tertiary); font-style: italic; }
+.framework-example {
+  font-size: 0.8rem;
+  background: var(--canvas-subtle);
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-family: 'SF Mono', monospace;
+}
+
+/* 文档表 */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.82rem;
+}
+.doc-table th {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-tertiary);
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+.doc-table td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.doc-table tr:hover { background: var(--canvas-subtle); }
+.mini-bar {
+  display: inline-flex;
+  height: 14px;
+  border-radius: 3px;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 80px;
+}
+.mini-bar .seg-g { background: var(--green); }
+.mini-bar .seg-y { background: var(--yellow); }
+.mini-bar .seg-r { background: var(--red); }
+.contamination-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.cb-clean { background: rgba(16,185,129,0.15); color: var(--green); }
+.cb-mild { background: rgba(245,158,11,0.15); color: var(--yellow); }
+.cb-heavy { background: rgba(239,68,68,0.15); color: var(--red); }
+
+/* 类型分布 */
+.type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.type-card {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.type-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.type-card-title { font-weight: 600; font-size: 0.9rem; }
+.type-card-total { font-size: 0.75rem; color: var(--text-tertiary); }
+.type-mini-bar {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+.type-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* 示例对比 */
+.example-list {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.example-item {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-left: 3px solid;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+}
+.example-item.intrinsic { border-left-color: var(--green); }
+.example-item.platform { border-left-color: var(--yellow); }
+.example-item.artifact { border-left-color: var(--red); }
+.example-meta { font-size: 0.7rem; color: var(--text-tertiary); margin-bottom: 0.3rem; }
+.example-text { color: var(--text-secondary); }
+
+/* Schema 对比 */
+.schema-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.schema-box {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.schema-box-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-secondary);
+}
+.schema-box pre {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-tertiary);
+  white-space: pre-wrap;
+  font-family: 'SF Mono', monospace;
+}
+.schema-box.current pre { color: var(--red); }
+.schema-box.target pre { color: var(--green); }
+
+/* 升级建议 */
+.upgrade-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.upgrade-item {
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+.upgrade-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.upgrade-title { font-weight: 600; font-size: 0.9rem; display: inline; }
+.upgrade-desc { font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.4rem; }
+.upgrade-code {
+  font-size: 0.75rem;
+  background: var(--canvas-subtle);
+  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  margin-top: 0.5rem;
+  font-family: 'SF Mono', monospace;
+  color: var(--text-tertiary);
+}
+
+.footer { text-align: center; font-size: 0.72rem; color: var(--text-tertiary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<h1>Know-how 数据偏差审计报告</h1>
+<p class="subtitle">审计 428 条知识条目 | 21 篇文档 | 生成日期 2026-06-29</p>
+
+<h2>1. 问题诊断</h2>
+<p>用户反馈："佣金和平台合作的内容，大部分是因为我们的调研的视角带来的，并不是这个行业本身的 know how"。审计确认：<b>118 条（27.6%）</b>的知识条目受平台视角污染，不具备行业本征性。</p>
+
+<div class="overview-grid">
+  <div class="stat-card total">
+    <div class="stat-number">428</div>
+    <div class="stat-label">总条目</div>
+  </div>
+  <div class="stat-card intrinsic">
+    <div class="stat-number">310</div>
+    <div class="stat-label">行业本征 (72.4%)</div>
+  </div>
+  <div class="stat-card platform">
+    <div class="stat-number">66</div>
+    <div class="stat-label">平台视角 (15.4%)</div>
+  </div>
+  <div class="stat-card artifact">
+    <div class="stat-number">52</div>
+    <div class="stat-label">调研产物 (12.1%)</div>
+  </div>
+</div>
+
+<div class="stack-bar-container">
+  <div class="stack-bar">
+    <div class="stack-segment green" style="width: 72.4%">310</div>
+    <div class="stack-segment yellow" style="width: 15.4%">66</div>
+    <div class="stack-segment red" style="width: 12.1%">52</div>
+  </div>
+  <div class="stack-legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>行业本征：去掉所有平台仍成立的经营知识</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>平台视角：描述商户-平台关系（佣金/渠道/合作条款）</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>调研产物：商户对平台条款的主观看法/平台产品数据</div>
+  </div>
+</div>
+
+<h2>2. 分类框架</h2>
+<p>判定标准核心测试：<b>"去掉测试"</b> — 如果把所有平台（美团/抖音/等）从世界上删除，这条知识是否仍然成立且有经营价值？</p>
+
+<div class="framework-grid">
+  <div class="framework-card intrinsic">
+    <div class="framework-title" style="color:var(--green)">行业本征 industry_intrinsic</div>
+    <div class="framework-criteria">描述健身/运动行业的经营本质：商业模式、运营规则、因果逻辑、战略选择。与任何平台无关。</div>
+    <div class="framework-test">去掉测试：✅ 通过 — 去掉平台后知识完全成立</div>
+    <div class="framework-example">"纯私教→高客单→低会员数量即可盈亏平衡"</div>
+  </div>
+  <div class="framework-card platform">
+    <div class="framework-title" style="color:var(--yellow)">平台视角 platform_perspective</div>
+    <div class="framework-criteria">描述商户如何与平台互动：佣金策略、渠道选择、线上供给策略。是平台关系的产物，不是行业本质。</div>
+    <div class="framework-test">去掉测试：❌ 不通过 — 去掉平台后这条知识失去意义</div>
+    <div class="framework-example">"美团高佣金→仅上引流品→平台定位为获客渠道"</div>
+  </div>
+  <div class="framework-card artifact">
+    <div class="framework-title" style="color:var(--red)">调研产物 interviewer_artifact</div>
+    <div class="framework-criteria">商户对平台条款的主观评价，或平台产品的运营数据。完全是调研视角带来的，不是行业知识。</div>
+    <div class="framework-test">去掉测试：❌ 不通过 — 这条知识本身就不该存在于行业知识库中</div>
+    <div class="framework-example">"对7%佣金和5折MEM认为过高" / "Listing提示条0.4%点击率"</div>
+  </div>
+</div>
+
+<h2>3. 按文档审计</h2>
+<table class="doc-table">
+  <thead>
+    <tr>
+      <th>文档</th>
+      <th>总数</th>
+      <th>分布</th>
+      <th>污染率</th>
+      <th>判定</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>健身通产品（平台视角）</td>
+      <td>24</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:25%"></div>
+          <div class="seg-y" style="width:33%"></div>
+          <div class="seg-r" style="width:42%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">6/8/10</span>
+      </td>
+      <td>75.0%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>行业整体</td>
+      <td>19</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:26%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:74%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">5/0/14</span>
+      </td>
+      <td>73.7%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>银吉姆</td>
+      <td>29</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:59%"></div>
+          <div class="seg-y" style="width:34%"></div>
+          <div class="seg-r" style="width:7%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">17/10/2</span>
+      </td>
+      <td>41.4%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>青橙SaaS</td>
+      <td>26</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:58%"></div>
+          <div class="seg-y" style="width:42%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">15/11/0</span>
+      </td>
+      <td>42.3%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>多品牌分析</td>
+      <td>24</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:54%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:46%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">13/0/11</span>
+      </td>
+      <td>45.8%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>多商户（TY/DDS/泡泡羽球/琵琶羽/韵动吧）</td>
+      <td>31</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:65%"></div>
+          <div class="seg-y" style="width:26%"></div>
+          <div class="seg-r" style="width:10%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">20/8/3</span>
+      </td>
+      <td>35.5%</td>
+      <td><span class="contamination-badge cb-mild">轻度污染</span></td>
+    </tr>
+    <tr>
+      <td>洛克公园</td>
+      <td>26</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:58%"></div>
+          <div class="seg-y" style="width:27%"></div>
+          <div class="seg-r" style="width:15%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">15/7/4</span>
+      </td>
+      <td>42.3%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>勤鸟SaaS</td>
+      <td>22</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:55%"></div>
+          <div class="seg-y" style="width:45%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">12/10/0</span>
+      </td>
+      <td>45.5%</td>
+      <td><span class="contamination-badge cb-heavy">重度污染</span></td>
+    </tr>
+    <tr>
+      <td>乐刻（深度营销分析）</td>
+      <td>24</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:62%"></div>
+          <div class="seg-y" style="width:33%"></div>
+          <div class="seg-r" style="width:4%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">15/8/1</span>
+      </td>
+      <td>37.5%</td>
+      <td><span class="contamination-badge cb-mild">轻度污染</span></td>
+    </tr>
+    <tr>
+      <td>乐刻</td>
+      <td>15</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:80%"></div>
+          <div class="seg-y" style="width:13%"></div>
+          <div class="seg-r" style="width:7%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">12/2/1</span>
+      </td>
+      <td>20.0%</td>
+      <td><span class="contamination-badge cb-mild">轻度污染</span></td>
+    </tr>
+    <tr>
+      <td>魔炼普拉提</td>
+      <td>15</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:87%"></div>
+          <div class="seg-y" style="width:7%"></div>
+          <div class="seg-r" style="width:7%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">13/1/1</span>
+      </td>
+      <td>13.3%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>PURE</td>
+      <td>15</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:93%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:7%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">14/0/1</span>
+      </td>
+      <td>6.7%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>Z&B</td>
+      <td>19</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:95%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:5%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">18/0/1</span>
+      </td>
+      <td>5.3%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>Flow Cycle</td>
+      <td>17</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:94%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:6%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">16/0/1</span>
+      </td>
+      <td>5.9%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>超级猩猩</td>
+      <td>17</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:94%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:6%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">16/0/1</span>
+      </td>
+      <td>5.9%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>久博体育</td>
+      <td>14</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:93%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:7%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">13/0/1</span>
+      </td>
+      <td>7.1%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>Hercules</td>
+      <td>31</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:97%"></div>
+          <div class="seg-y" style="width:3%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">30/1/0</span>
+      </td>
+      <td>3.2%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>威尔仕</td>
+      <td>14</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:100%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">14/0/0</span>
+      </td>
+      <td>0.0%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>NRG</td>
+      <td>12</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:100%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">12/0/0</span>
+      </td>
+      <td>0.0%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>ZERO G Bungee</td>
+      <td>17</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:100%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">17/0/0</span>
+      </td>
+      <td>0.0%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+    <tr>
+      <td>Yee Active普拉提</td>
+      <td>17</td>
+      <td>
+        <div class="mini-bar">
+          <div class="seg-g" style="width:100%"></div>
+          <div class="seg-y" style="width:0%"></div>
+          <div class="seg-r" style="width:0%"></div>
+        </div>
+        <span style="font-size:0.7rem;color:var(--text-tertiary)">17/0/0</span>
+      </td>
+      <td>0.0%</td>
+      <td><span class="contamination-badge cb-clean">干净</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. 按知识类型审计</h2>
+<p>因果观察的污染率最高（36.0%），因为"平台佣金→商户行为"这类因果链是最典型的调研视角产物。</p>
+
+<div class="type-grid">
+  <div class="type-card">
+    <div class="type-card-header">
+      <span class="type-card-title">事实</span>
+      <span class="type-card-total">172 条 | 污染率 22.7%</span>
+    </div>
+    <div class="type-mini-bar">
+      <div class="seg-g" style="width:77.3%"></div>
+      <div class="seg-y" style="width:12.2%"></div>
+      <div class="seg-r" style="width:10.5%"></div>
+    </div>
+    <div class="type-stat-row">
+      <span style="color:var(--green)">本征 133</span>
+      <span style="color:var(--yellow)">平台 21</span>
+      <span style="color:var(--red)">产物 18</span>
+    </div>
+  </div>
+  <div class="type-card">
+    <div class="type-card-header">
+      <span class="type-card-title">规则</span>
+      <span class="type-card-total">106 条 | 污染率 26.4%</span>
+    </div>
+    <div class="type-mini-bar">
+      <div class="seg-g" style="width:73.6%"></div>
+      <div class="seg-y" style="width:16.0%"></div>
+      <div class="seg-r" style="width:10.4%"></div>
+    </div>
+    <div class="type-stat-row">
+      <span style="color:var(--green)">本征 78</span>
+      <span style="color:var(--yellow)">平台 17</span>
+      <span style="color:var(--red)">产物 11</span>
+    </div>
+  </div>
+  <div class="type-card">
+    <div class="type-card-header">
+      <span class="type-card-title">排除项</span>
+      <span class="type-card-total">61 条 | 污染率 31.1%</span>
+    </div>
+    <div class="type-mini-bar">
+      <div class="seg-g" style="width:68.9%"></div>
+      <div class="seg-y" style="width:19.7%"></div>
+      <div class="seg-r" style="width:11.5%"></div>
+    </div>
+    <div class="type-stat-row">
+      <span style="color:var(--green)">本征 42</span>
+      <span style="color:var(--yellow)">平台 12</span>
+      <span style="color:var(--red)">产物 7</span>
+    </div>
+  </div>
+  <div class="type-card">
+    <div class="type-card-header">
+      <span class="type-card-title">因果观察</span>
+      <span class="type-card-total">89 条 | 污染率 36.0%</span>
+    </div>
+    <div class="type-mini-bar">
+      <div class="seg-g" style="width:64.0%"></div>
+      <div class="seg-y" style="width:18.0%"></div>
+      <div class="seg-r" style="width:18.0%"></div>
+    </div>
+    <div class="type-stat-row">
+      <span style="color:var(--green)">本征 57</span>
+      <span style="color:var(--yellow)">平台 16</span>
+      <span style="color:var(--red)">产物 16</span>
+    </div>
+  </div>
+</div>
+
+<h2>5. 示例对比</h2>
+
+<h3 style="color:var(--green)">行业本征（应保留）</h3>
+<div class="example-list">
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 事实</div>
+    <div class="example-text">会员以高收入白领和外籍人士为主</div>
+  </div>
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 事实</div>
+    <div class="example-text">选址偏好核心商圈甲级写字楼</div>
+  </div>
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 事实</div>
+    <div class="example-text">提供瑜伽、普拉提、团课等多品类课程</div>
+  </div>
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 事实</div>
+    <div class="example-text">强调空间设计和环境品质</div>
+  </div>
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 事实</div>
+    <div class="example-text">教练筛选标准严格</div>
+  </div>
+  <div class="example-item intrinsic">
+    <div class="example-meta">PURE · 规则</div>
+    <div class="example-text">新店选址必须满足周边高净值人群密度要求</div>
+  </div>
+</div>
+
+<h3 style="color:var(--yellow)">平台视角（应标记隔离）</h3>
+<div class="example-list">
+  <div class="example-item platform">
+    <div class="example-meta">乐刻 · 事实</div>
+    <div class="example-text">教练采用平台合作制而非雇佣制</div>
+  </div>
+  <div class="example-item platform">
+    <div class="example-meta">乐刻 · 因果观察</div>
+    <div class="example-text">平台化教练→人力成本灵活→毛利可控</div>
+  </div>
+  <div class="example-item platform">
+    <div class="example-meta">魔炼普拉提 · 排除项</div>
+    <div class="example-text">不走低价引流路线</div>
+  </div>
+  <div class="example-item platform">
+    <div class="example-meta">青橙SaaS · 事实</div>
+    <div class="example-text">收入GTV 29亿，店月均现金收入10万</div>
+  </div>
+  <div class="example-item platform">
+    <div class="example-meta">青橙SaaS · 事实</div>
+    <div class="example-text">旗下有亿企练（企业健身服务平台）</div>
+  </div>
+  <div class="example-item platform">
+    <div class="example-meta">青橙SaaS · 事实</div>
+    <div class="example-text">SaaS支付通道返佣为免费版盈利模式</div>
+  </div>
+</div>
+
+<h3 style="color:var(--red)">调研产物（应剔除）</h3>
+<div class="example-list">
+  <div class="example-item artifact">
+    <div class="example-meta">PURE · 因果观察</div>
+    <div class="example-text">核心商圈选址→高租金→倒逼高客单价维持</div>
+  </div>
+  <div class="example-item artifact">
+    <div class="example-meta">乐刻 · 规则</div>
+    <div class="example-text">教练自主排课、平台抽成</div>
+  </div>
+  <div class="example-item artifact">
+    <div class="example-meta">魔炼普拉提 · 因果观察</div>
+    <div class="example-text">产后修复场景→强需求→高转化高客单</div>
+  </div>
+  <div class="example-item artifact">
+    <div class="example-meta">Z&B · 因果观察</div>
+    <div class="example-text">纯私教→高客单→低会员数量即可盈亏平衡</div>
+  </div>
+  <div class="example-item artifact">
+    <div class="example-meta">Flow Cycle · 规则</div>
+    <div class="example-text">满座率低于60%需调整排课策略</div>
+  </div>
+  <div class="example-item artifact">
+    <div class="example-meta">超级猩猩 · 因果观察</div>
+    <div class="example-text">纯团课无私教→客单价天花板→盈利靠坪效和翻台率</div>
+  </div>
+</div>
+
+<h2>6. Schema 差距分析</h2>
+<p>共同设计的 schema 有 <b>evidence.source</b>（区分知识来源通道）和 <b>causal_role</b>（区分因果方向），但当前数据完全没有使用这些字段。这导致无法在结构层面区分行业知识和平台视角产物。</p>
+
+<div class="schema-comparison">
+  <div class="schema-box current">
+    <div class="schema-box-title" style="color:var(--red)">当前数据结构（缺失关键字段）</div>
+<pre>{
+  "facts": ["抖音佣金1.4%..."],
+  "rules": ["美团不上年卡..."],
+  "explicit_exclusions": ["不接受7%佣金"],
+  "causal_observations": ["美团高佣金→引流品"]
+}
+
+// 问题：
+// 1. 没有 evidence.source → 无法区分知识来源
+// 2. 没有 causal_role → 无法区分因果方向
+// 3. 没有 knowledge_domain → 无法区分行业/平台
+// 4. 扁平字符串 → 无法附加元信息
+// 5. 平台知识和行业知识混在一起</pre>
+  </div>
+  <div class="schema-box target">
+    <div class="schema-box-title" style="color:var(--green)">升级后结构（对齐 schema 设计）</div>
+<pre>{
+  "claim": "纯私教→高客单→
+    低会员数即盈亏平衡",
+  "layer": "rule",
+  "knowledge_domain": 
+    "industry_intrinsic",
+  "causal_role": "drives",
+  "evidence": {
+    "source": "interview",
+    "confidence": "disputed",
+    "supporting_facts": [...],
+    "falsification_signal": null
+  },
+  "context": {
+    "store_type": "私教工作室",
+    "preconditions": [...],
+    "known_exceptions": "..."
+  }
+}
+
+// knowledge_domain 新增字段：
+// industry_intrinsic | 
+// platform_perspective | 
+// interviewer_artifact</pre>
+  </div>
+</div>
+
+<h2>7. 升级建议</h2>
+
+<div class="upgrade-list">
+  <div class="upgrade-item">
+    <span class="upgrade-num">1</span><span class="upgrade-title">新增 knowledge_domain 字段</span>
+    <div class="upgrade-desc">在每条知识记录中新增 <code>knowledge_domain</code> 字段，值为 <code>industry_intrinsic</code> / <code>platform_perspective</code> / <code>interviewer_artifact</code>。提取时自动标注，人工复核。</div>
+    <div class="upgrade-code">"knowledge_domain": "industry_intrinsic"</div>
+  </div>
+  <div class="upgrade-item">
+    <span class="upgrade-num">2</span><span class="upgrade-title">提取阶段加入"去掉测试"</span>
+    <div class="upgrade-desc">提取规则中加入前置过滤：对每条候选知识执行"去掉测试"——如果去掉所有平台后该知识不成立，则标记为 <code>platform_perspective</code> 或 <code>interviewer_artifact</code>，不进入行业知识库。</div>
+  </div>
+  <div class="upgrade-item">
+    <span class="upgrade-num">3</span><span class="upgrade-title">补充 evidence.source 和 causal_role</span>
+    <div class="upgrade-desc">对全部 428 条数据回填 <code>evidence.source</code>（当前全部是 interview，未来应从 config_extract / behavior_inference 补充）和 <code>causal_role</code>（drives/enables/vetoes/constrains），让因果方向可机器判读。</div>
+  </div>
+  <div class="upgrade-item">
+    <span class="upgrade-num">4</span><span class="upgrade-title">补充 context.store_type</span>
+    <div class="upgrade-desc">为每条知识标注适用的门店类型（如"私教工作室"、"团课工作室"、"商业健身房"），使知识可条件化应用，而非一刀切。</div>
+  </div>
+  <div class="upgrade-item">
+    <span class="upgrade-num">5</span><span class="upgrade-title">平台知识单独存储，不混入行业知识库</span>
+    <div class="upgrade-desc">将 <code>platform_perspective</code> 和 <code>interviewer_artifact</code> 类条目分离到独立的"平台合作知识库"，与分析层的行业知识库隔离。聚类分析仅使用 <code>industry_intrinsic</code> 子集。</div>
+  </div>
+  <div class="upgrade-item">
+    <span class="upgrade-num">6</span><span class="upgrade-title">重新聚类：仅用 310 条行业本征数据</span>
+    <div class="upgrade-desc">当前聚类结果（"定价与佣金"为最强共识）是污染产物。应仅用 310 条行业本征数据重新聚类，预期会涌现出真正的行业 know-how 主题（如"教练供给瓶颈"、"单品类 vs 综合业态"、"预付制 vs 按次制"等）。</div>
+  </div>
+</div>
+
+<h2>8. 重新聚类预期</h2>
+<p>剔除 118 条污染数据后，310 条行业本征知识预计会涌现以下主题（基于人工预读）：</p>
+<p style="color:var(--text-secondary);font-size:0.85rem">
+<b>业态分化</b>：预付年卡制 vs 月卡制 vs 按次付费，各自的现金流模型和增长逻辑<br>
+<b>教练供给</b>：教练质量是服务驱动型业态的核心瓶颈，筛选/培训/留存/激励规则<br>
+<b>品类策略</b>：单品类深耕（普拉提/单车/蹦极）vs 综合业态，专业化壁垒 vs 规模化能力<br>
+<b>选址与成本</b>：核心商圈高租金倒逼高客单 vs 社区低租金低客单走量<br>
+<b>获客方式</b>：口碑转介绍 vs 社交媒体 vs 地推，不同业态的获客效率差异<br>
+<b>用户粘性</b>：社群运营/教练IP/课程趣味性对留存的影响
+</p>
+
+<div class="footer">
+  Know-how 数据偏差审计报告 | 审计 428 条 | 生成于 2026-06-29
+</div>
+
+</body>
+</html>
